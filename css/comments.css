@@ -67,10 +67,9 @@ body
 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 0.70em;
-	color: #cacaca;
-	
+	color: #cacaca;	
 	display: inline;
-	padding-left: 4px;
+	margin-left: 4px;
 
 }
 
