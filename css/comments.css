@@ -16,7 +16,8 @@ body
 	margin: 20px auto;
 	background: rgba(0,0,0,0.02);
 	border: solid 1px #e3e3e3;
-	box-shadow: 0 1px rgba(0,0,0,0.03);
+	box-shadow: 0 1px #ffffff;
+	padding-bottom: 20px;
 }
 
 .comment-count
