@@ -117,8 +117,7 @@ div
 	border: solid 3px #2c2c2c;
 		
 	background-color: #ffffff;
-	
-	font-family: 'Typicons', sans-serif;
+	margin: 3px 0\9;
 	font-size: 1.4em;
 	font-weight: bold;
 	color: #2c2c2c;
@@ -162,7 +161,7 @@ div
 
 .comment-count::before
 {
-	content: "\\";
+	content: "\005C";
 	font-family: 'Typicons';
 	font-size: 1.4em;
 	font-weight: normal;
@@ -254,17 +253,6 @@ div
 	background-color: #ffffff;
 }
 
-
-@font-face {
-	font-family: 'Typicons';
-	src: url('../font/typicons-regular-webfont.eot');
-	src: url('../font/typicons-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../font/typicons-regular-webfont.woff') format('woff'),
-		url('../font/typicons-regular-webfont.ttf') format('truetype'),
-		url('../font/typicons-regular-webfont.svg#TypiconsRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
 
 ul, ol
 {
