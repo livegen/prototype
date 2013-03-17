@@ -9,7 +9,7 @@ li {
     list-style-type: none;
 }
 
-ul, li {
+ul, li, td {
     margin: 0;
     padding: 0;
 }
@@ -46,6 +46,11 @@ ul, li {
     line-height: 22px;
     font-size: 0.95em;
     font-weight: 700;
+}
+
+.item-title div {
+    height: 48px;
+    overflow: hidden;
 }
 
 .item-comment-count {
@@ -90,16 +95,47 @@ td.item-authoring, td.item-title, td.item-comment-count {
 
 .platform-multi {
     background-color: #323840;
+    font-size: .5em;
 }
 
 .item-thumbnail {
     width: 126px;
 }
-.item-stats {
+
+.item-thumbnail-frame {
+    display: inline-block;
+    border: solid 2px #c2c2c2;
+    border-radius: 6px;
+}
+
+.item-thumbnail-frame img {
+    border-radius: 4px;
+    vertical-align: top;
+    width: 122px;
+    height: auto;
+}
+
+.item-popularity {
     width: 76px;
 }
 
-.item-platform, .item-thumbnail, .item-stats {
+.hp, .popularity {
+    font-size: .8em;
+    font-weight: 700;
+}
+
+.heart {
+    font-size: 1.2em;
+}
+
+.popularity {
+    display: inline-block;
+    padding: 0 3px;
+    border-radius: 3px;
+    border: solid 1px #e5e5e5;    
+}
+
+.item-platform, .item-thumbnail, .item-popularity {
     padding: 0;
     text-align: center;
 }
