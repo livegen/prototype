@@ -27,6 +27,7 @@ ul, li, td {
 
 .news-item {
     font-family:"Open Sans", "Arial", sans-serif;
+    background-color: #ffffff;
 }
 
 .item-authoring {
@@ -35,9 +36,9 @@ ul, li, td {
 }
 
 .time-stamp {
-    font-size: 0.8em;
+    font-size: 0.85em;
     font-weight: 400;
-    margin-left: 8px;
+    margin-left: 4px;
 }
 
 .item-title {
@@ -60,8 +61,11 @@ ul, li, td {
 
 .item-comment-count:after {
     font-weight: 400;
-    margin-left: 4px;
     content: 'commentaires';
+}
+
+.item-comment-count i {
+    margin-right: 4px;
 }
 
 td.item-authoring, td.item-title, td.item-comment-count {
@@ -120,12 +124,12 @@ td.item-authoring, td.item-title, td.item-comment-count {
 }
 
 .hp, .popularity {
-    font-size: .8em;
+    font-size: .7em;
     font-weight: 700;
 }
 
 .heart {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .popularity {
