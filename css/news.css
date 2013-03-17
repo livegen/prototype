@@ -264,8 +264,8 @@ ul, ol
 	list-style-type: none;
 }
 
-*
+html, body, div, ul, li, th, tr, td
 {
-	mrgin: 0;
+	margin: 0;
 	padding:0;
 }
