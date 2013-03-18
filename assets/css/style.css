@@ -90,9 +90,17 @@ a:hover {
     color: #ffffff;
 }
 
-.star {
-    font-size: 1.4em;
+.starred-item:hover .star {
     color: #fbde42;
+  }
+
+.star {
+    font-size: 1.4em;        
+    -webkit-transition: color 700ms ease-out;
+    -moz-transition: color 1200ms;
+    -o-transition: color 1200ms;
+    -ms-transition: color 1200ms;
+    transition: color 1200ms;
 }
 
 .item-platform {
