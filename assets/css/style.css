@@ -33,15 +33,67 @@ a:hover {
     padding-top: 1px;
 }
 
-.news-item {
-    font-family:"Open Sans", "Arial", sans-serif;
+.news-roll-load {
+    font-family: 'Droid Sans', 'Open Sans', 'Arial', sans-serif;
+    font-size: .7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #d5d5d5;
     background-color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    border: solid #e5e5e5;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 6px 6px;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .06);
+    -webkit-transition: all linear 140ms;
+    -moz-transition: all linear 140ms;
+    -o-transition: all linear 140ms;
+    transition: all linear 140ms;
+}
+
+.news-roll-load:hover {
+    background-color: #448ccb;
+    color: #ffffff;
+    border-color: #448ccb;
+    box-shadow: inset 0 1px rgba(0, 0, 0, .1);
+}
+
+.news-item {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
     cursor: pointer;
     display: table;
     border: solid 1px #e5e5e5;
     margin-top: -1px;
 }
 
+.starred-item {
+    background-color: #252525;
+    color: #ffffff;
+    border-color: #252525;
+}
+
+.starred-item .item-authoring, .starred-item .item-comment-count {
+    color: #ffffff;
+}
+
+.star-nav {
+    font-size: 1.2em;  
+    color: #474747;
+    padding: 2px 0;
+}
+
+.star-nav:hover {
+    color: #ffffff;
+}
+
+.star {
+    font-size: 1.4em;
+    color: #fbde42;
+}
 
 .item-platform {
     width: 82px;
@@ -67,7 +119,7 @@ a:hover {
 
 .item-thumbnail-frame {
     display: inline-block;
-    border: solid 2px #c2c2c2;
+    border: solid 2px rgba(0, 0, 0, .1);
     border-radius: 6px;
 }
 
@@ -90,7 +142,6 @@ a:hover {
 }
 
 .item-title {
-    color: #111111;
     line-height: 18px;
     font-size: .9em;
     font-weight: 700;
@@ -99,12 +150,13 @@ a:hover {
     overflow: hidden;
 }
 
+
 .item-authoring, .item-comment-count {
     font-weight: 700;
     font-size: 0.7em;
-    padding-left: 20px;
-    color: #707070;
+    padding-left: 20px;    
     line-height: 16px;
+    color: #707070;
 }
 
 .item-comment-count:after {
@@ -117,7 +169,7 @@ a:hover {
     margin-right: 4px;
 }
 
-.item-popularity {
+.item-popularity, .starred-nav {
     width: 76px;
     display: table-cell;
     text-align: center;
@@ -158,7 +210,7 @@ a:hover {
     background-color: #66bc29;
 }
 
-.item-platform, .item-thumbnail, .item-popularity, .item-details {
+.item-platform, .item-thumbnail, .item-popularity, .item-details, .starred-nav {
     position: relative;
     display: table-cell;
     vertical-align: middle;
