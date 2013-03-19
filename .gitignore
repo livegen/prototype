@@ -1,2 +1,5 @@
 # c9.io files
-./c9revisions/
+.c9revisions/
+
+#Javascript libraries
+assets/js/lib/
