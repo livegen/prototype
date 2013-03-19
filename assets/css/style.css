@@ -39,6 +39,29 @@ a:hover {
     color: #707070;
 }
 
+.filter-settings {    
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
+}
+
+.filter-platforms-settings li {
+    display: table-cell;    
+    color: #333333;
+    font-weight: 700;
+    border-right: solid 1px #e5e5e5;
+    height: 100%;
+    padding: 0 8px;
+}
+
+input[type='checkbox'] {
+    vertical-align: middle;
+    margin: 0;
+}
+
+.filter-platforms-settings label {
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
 .content-filter .icon-filter {
     color: #cccccc;
     font-size: .9em;
