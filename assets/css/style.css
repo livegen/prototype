@@ -29,8 +29,10 @@ a:hover {
 }
 
 .content-filter {
-    display: block;
     position: relative;
+}
+
+.content-filter, .filter-settings {
     line-height: 46px;
     border: solid #e5e5e5;
     border-width: 1px 1px 0 1px;
@@ -77,6 +79,11 @@ a:hover {
     box-shadow: inset 0 1px rgba(0, 0, 0, .05);
 }
 
+.filter-active, .sort-active {
+    background-color: #444444;
+    border-color: #111111;
+    color: #ffffff;
+}
 .content-all {
     display: inline;
     position: absolute;
@@ -118,12 +125,16 @@ a:hover {
     color: #3575ad;
 }
 
-.filter-platforms, .content-all {
+.content-all {
     text-transform: uppercase;
 }
 
 .filter-platforms, .sort-criteria {
     margin-right: 6px;
+}
+
+.filter-platform-checked {
+    box-shadow: inset 0 4px #448ccb;
 }
 
 .content-roll {
