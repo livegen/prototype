@@ -282,12 +282,29 @@ a:hover {
 }
 
 .platform-multi {
-    background-color: #323840;
+    background-color: #2e3192;
     font-size: .5em;
 }
 
 .platform-360 {
     background-color: #66bc29;
+}
+
+.platform-pc-item-hover {
+    color: #ff5113;    
+}
+
+.platform-multi-item-hover {
+    color: #2e3192;
+}
+
+.platform-360-item-hover {
+    color: #66bc29;
+}
+
+.content-item:hover .popularity {
+    background-color: #252525;   
+    color: #ffffff;
 }
 
 .item-platform, .item-thumbnail, .item-popularity, .item-details, .starred-nav {
