@@ -39,9 +39,9 @@ a:hover {
     color: #707070;
 }
 
-.content-filter .icon-caret-down {
+.content-filter .icon-filter {
     color: #cccccc;
-    font-size: 1.1em;
+    font-size: .9em;
 }
 
 .filter, .sort {
@@ -91,7 +91,7 @@ a:hover {
     border-color: #3575ad;
 }
 
-.filter:hover .icon-caret-down, .sort:hover .icon-caret-down {
+.filter:hover .icon-filter, .sort:hover .icon-filter {
     color: #3575ad;
 }
 
@@ -257,6 +257,7 @@ a:hover {
 
 .hp {
     margin-bottom: -6px;
+    line-height: 15px;
 }
 
 .hp, .popularity {
@@ -267,6 +268,7 @@ a:hover {
 .heart {
     font-size: 1.4em;
     margin-bottom: -2px;
+    line-height: 30px;
 }
 
 .popularity {
@@ -305,6 +307,11 @@ a:hover {
 .content-item:hover .popularity {
     background-color: #252525;   
     color: #ffffff;
+    border: 0;
+}
+
+.content-item:hover .heart {
+    color: #e60000;
 }
 
 .item-platform, .item-thumbnail, .item-popularity, .item-details, .starred-nav {
