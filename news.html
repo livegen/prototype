@@ -17,7 +17,7 @@
                     <span class="title">filtrer</span><span class="filter-platforms" id="filter-platform"></span><i class="icon-filter"></i>
                 </div>
                 <div class="sort">
-                    <span class="title">trier</span><span class="sort-criteria">par date</span><i class="icon-filter"></i>
+                    <span class="title">trier</span><span class="sort-criteria" id="sort-criteria"></span><i class="icon-filter"></i>
                 </div>
                 <div class="content-all">
                     <a href="#">
@@ -39,8 +39,8 @@
             </div>
             <div class="content-settings" id="sort-settings">                
                 <ul>
-                    <li><input type="radio" name="sort" data-sort="DATE" /><label>Trier par date de publication</label></li>
-                    <li><input type="radio" name="sort" data-sort="POP" /><label>Trier par popularité</label></li>
+                    <li><input type="radio" name="sort" data-sort-id="DATE" data-sort-label="Par date"/><label>Trier par date de publication</label></li>
+                    <li><input type="radio" name="sort" data-sort-id="POP" data-sort-label="Par popularité"/><label>Trier par popularité</label></li>
                 </ul>
             </div>
             <ul class="content-roll">
