@@ -33,7 +33,7 @@ a:hover {
     border-width: 1px 1px 0 1px;
 }
 
-.content-filter, .filter-settings, .sort-settings {
+.content-filter, .content-settings {
     line-height: 46px;
     border-style: solid;
     border-color: #e5e5e5;
@@ -42,12 +42,12 @@ a:hover {
     color: #707070;
 }
 
-.filter-settings, .sort-settings {    
+.content-settings {    
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
     border-width: 0 1px 0 1px;
 }
 
-.filter-settings li, .sort-settings li {
+.content-settings li {
     display: table-cell;    
     color: #333333;
     font-weight: 700;
@@ -57,13 +57,13 @@ a:hover {
     cursor: pointer;
 }
 
-.filter-settings input, .filter-settings label, .sort-settings input, .sort-settings label {
+.content-settings input, .content-settings label {
     vertical-align: middle;
     cursor: pointer;
     margin: 0;
 }
 
-.filter-settings label, .sort-settings label {
+.content-settings label {
     margin-left: 8px;
 }
 

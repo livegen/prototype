@@ -14,7 +14,7 @@
         <div class="content-roll-wrapper">
             <div class="content-filter">
                 <div class="filter">
-                    <span class="title">filtrer</span><span class="filter-platforms">MULTI • PC • PS3 • 360 • Wii U • 3DS • PS Vita • Touch</span><i class="icon-filter"></i>
+                    <span class="title">filtrer</span><span class="filter-platforms" id="filter-platform"></span><i class="icon-filter"></i>
                 </div>
                 <div class="sort">
                     <span class="title">trier</span><span class="sort-criteria">par date</span><i class="icon-filter"></i>
@@ -25,19 +25,19 @@
                     </a>
                 </div>
             </div>
-            <div class="filter-settings">                
+            <div class="content-settings" id="filter-settings">                
                 <ul>
-                    <li><input type="checkbox" data-platform="MULTI" /><label>MULTI</label></li>
-                    <li><input type="checkbox" data-platform="PC" /><label>PC</label></li>
-                    <li><input type="checkbox" data-platform="PS3" /><label>PS3</label></li>
-                    <li><input type="checkbox" data-platform="360" /><label>360</label></li>
-                    <li><input type="checkbox" data-platform="WIIU" /><label>Wii U</label></li>
-                    <li><input type="checkbox" data-platform="3DS" /><label>3DS</label></li>
-                    <li><input type="checkbox" data-platform="PSVITA" /><label>PS Vita</label></li>
-                    <li><input type="checkbox" data-platform="TOUCH" /><label>Touch</label></li>
+                    <li><input type="checkbox" data-platform-id="MULTI" data-platform-label="MULTI"/><label>MULTI</label></li>
+                    <li><input type="checkbox" data-platform-id="PC" data-platform-label="PC" /><label>PC</label></li>
+                    <li><input type="checkbox" data-platform-id="PS3" data-platform-label="PS3" /><label>PS3</label></li>
+                    <li><input type="checkbox" data-platform-id="360" data-platform-label="360" /><label>360</label></li>
+                    <li><input type="checkbox" data-platform-id="WIIU" data-platform-label="Wii U" /><label>Wii U</label></li>
+                    <li><input type="checkbox" data-platform-id="3DS" data-platform-label="3DS" /><label>3DS</label></li>
+                    <li><input type="checkbox" data-platform-id="PSVITA" data-platform-label="PS Vita" /><label>PS Vita</label></li>
+                    <li><input type="checkbox" data-platform-id="TOUCH" data-platform-label="Touch" /><label>Touch</label></li>
                 </ul>
             </div>
-            <div class="sort-settings">                
+            <div class="content-settings" id="sort-settings">                
                 <ul>
                     <li><input type="radio" name="sort" data-sort="DATE" /><label>Trier par date de publication</label></li>
                     <li><input type="radio" name="sort" data-sort="POP" /><label>Trier par popularité</label></li>
