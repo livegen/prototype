@@ -178,32 +178,24 @@ a:hover {
     margin-top: -1px;
 }
 
-.starred-item {
+.star-items {
     background-color: #252525;
     color: #ffffff;
     border-color: #252525;
+    margin-bottom: 1px;
 }
 
-.starred-item .item-authoring, .starred-item .item-comment-count {
+.star-items .item-authoring, .star-items .item-comment-count {
     color: #ffffff;
 }
 
-.star-nav {
-    font-size: 1.2em;  
-    color: #474747;
-    padding: 2px 0;
-}
 
-.star-nav:hover {
-    color: #ffffff;
-}
-
-.starred-item:hover .star {
+.content-item:hover .star {
     color: #fbde42;
   }
 
 .star {
-    font-size: 1.4em;        
+    font-size: 1.6em;        
     -webkit-transition: color 700ms ease-out;
     -moz-transition: color 1200ms;
     -o-transition: color 1200ms;
@@ -212,7 +204,7 @@ a:hover {
 }
 
 .item-platform {
-    width: 82px;
+    width: 72px;
     display: table-cell;
     text-align: center;
 }
@@ -248,7 +240,7 @@ a:hover {
 }
 
 .item-details {
-    width: 432px;
+    width: 442px;
     vertical-align: middle;
 }
 
@@ -286,7 +278,7 @@ a:hover {
     margin-right: 4px;
 }
 
-.item-popularity, .starred-nav {
+.item-popularity, .star-wrap {
     width: 76px;
     display: table-cell;
     text-align: center;
@@ -351,9 +343,59 @@ a:hover {
     color: #e60000;
 }
 
-.item-platform, .item-thumbnail, .item-popularity, .item-details, .starred-nav {
+.item-platform, .item-thumbnail, .item-popularity, .item-details {
     position: relative;
     display: table-cell;
     vertical-align: middle;
     height: 100px;
+}
+
+ .star-wrap, .content-starred {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    height: 90px;
+    padding-left: 1px;
+ }
+ 
+.star-items img
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    height: 90px;
+    max-height: 90px;
+}
+
+.content-starred-hover {
+    position: absolute;
+    height: 90px;
+    width: 160px;
+    box-shadow: inset 0 90px rgba(0, 0, 0, .6);
+    display: none;
+}
+
+.starred-title {
+    position: absolute;
+    bottom: 0;
+    font-size: .75em;
+    line-height: 1.2em;
+    padding: 10px;
+    text-shadow: 0 1px #222222;
+}
+
+.content-starred:hover .content-starred-hover {
+    display: inline;
+}
+
+.star-wrap {
+    background: #111111; /* Old browsers */
+    background: -moz-linear-gradient(top,  #111111 0%, #333333 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#111111), color-stop(100%,#333333)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #111111 0%,#333333 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #111111 0%,#333333 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #111111 0%,#333333 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #111111 0%,#333333 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111111', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
 }
