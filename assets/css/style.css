@@ -414,12 +414,14 @@ a:hover {
 .livegen-symbol {
     display: table-cell;
     vertical-align: middle;
-    width: 64px;
+    width: 52px;
     text-align: center;
 }
 
 .livegen-symbol img {
     vertical-align: bottom;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-items {
@@ -428,7 +430,7 @@ a:hover {
     color: #ffffff;
     font-size: 1.1em;
     border-collapse: collapse;
-    display: inline-table;
+    display: table;
     position: relative;
 }
 
@@ -514,3 +516,6 @@ li.nav-menu:hover {
     color: #53b0ff;
 }
 
+.nav-menu .secondary {
+    background-color: #262626;
+}
