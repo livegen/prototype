@@ -541,7 +541,81 @@ li.nav-menu:hover {
     background: -o-linear-gradient(top,  #0063b7 0%,#00447e 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  #0063b7 0%,#00447e 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #0063b7 0%,#00447e 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0063b7', endColorstr='#00447e',GradientType=0 ); /* IE6-9 */
     text-shadow: 0 1px rgba(0, 0, 0, .15); 
     box-shadow: 0 1px #00447e;
+}
+
+.nav-items .search {
+    padding: 0;
+    border-left: 0;
+}
+
+.nav-items .active {
+    background-color: #0079df;   
+}
+
+.search input {
+    padding: 0 12px;
+    margin: 0;
+    border: 0;
+    display: inline-block;
+    height: 46px;
+    background-color: #1381df;
+    color: #fff;
+    font-style: italic;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    box-shadow: inset 2px 0 4px rgba(0, 0, 0, .06);
+}
+
+.search input:focus {
+    outline: none;
+    background-color: #0079df;
+}
+
+.search ::-webkit-input-placeholder {
+    color: #80c5ff; 
+}
+ 
+.search :-moz-placeholder {
+    color: #80c5ff; 
+}
+ 
+ .search :-ms-input-placeholder {
+    color: #80c5ff;
+}
+ 
+.search:hover input {
+    background-color: #0079df;
+}
+
+li.arrow-box {
+    border-right-color: #1b96ff;
+    background-color: #1b96ff;
+    padding: 0 10px;
+}
+
+li.arrow-box:hover {
+    background-color: #1b96ff;
+}
+.arrow-box {
+    position: relative;
+}
+
+.arrow-box:after {
+	left: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow-box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #1b96ff;
+	border-width: 6px;
+	top: 50%;
+	margin-top: -6px;
 }
