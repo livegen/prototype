@@ -529,8 +529,19 @@ li.nav-menu:hover {
     float: right;    
 }
 
+.user-details li {
+    border: 0;
+}
+
 .user-details li:hover {
-    background-color: #363636;
-    text-shadow: 0 1px rgba(0, 0, 0, .15);
-    box-shadow: 0 2px #252525;
+    background: #0063b7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #0063b7 0%, #00447e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0063b7), color-stop(100%,#00447e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #0063b7 0%,#00447e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #0063b7 0%,#00447e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #0063b7 0%,#00447e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #0063b7 0%,#00447e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0063b7', endColorstr='#00447e',GradientType=0 ); /* IE6-9 */
+    text-shadow: 0 1px rgba(0, 0, 0, .15); 
+    box-shadow: 0 1px #00447e;
 }
