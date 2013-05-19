@@ -176,13 +176,13 @@ a:hover {
     display: table;
     border: solid 1px #e5e5e5;
     margin-top: -1px;
-    max-width: 716px;
+    max-width: 718px;
 }
 
 .star-items {
     background-color: #ffffff;
     border-color: #e5e5e5;
-    max-width: 716px;
+    max-width: 718px;
 }
 
 .star-items .item-authoring, .star-items .item-comment-count {
@@ -397,8 +397,15 @@ a:hover {
     padding: 0;
     display: inline-block;
     height: 46px;
-    background-color: #1589ec;
-    box-shadow: 0 1px #0079df;
+    background: #00b4ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #00b4ff 0%, #1589ec 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b4ff), color-stop(100%,#1589ec)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #00b4ff 0%,#1589ec 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #00b4ff 0%,#1589ec 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #00b4ff 0%,#1589ec 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #00b4ff 0%,#1589ec 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b4ff', endColorstr='#1589ec',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0 1px #0079df, inset 0 1px rgba(255, 255, 255, .2);
     font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
     min-width: 100%;
 }
@@ -449,7 +456,7 @@ a:hover {
     font-weight: 700;
     border-width: 0 1px 0 1px;
     border-style: solid;
-    border-color: #0079df;
+    border-color: #1589ec;
 }
 
 .nav-items > li i, .user-details > li i {
@@ -464,7 +471,7 @@ a:hover {
 }
 
 .nav-items > li:hover {
-    background-color: #0079df;
+    background-color: #1589ec;
 }
 
 .nav-menu {
@@ -534,24 +541,25 @@ li.nav-menu:hover {
 }
 
 .user-details li:hover {
-    background: #0063b7; /* Old browsers */
-    background: -moz-linear-gradient(top,  #0063b7 0%, #00447e 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0063b7), color-stop(100%,#00447e)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #0063b7 0%,#00447e 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #0063b7 0%,#00447e 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #0063b7 0%,#00447e 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #0063b7 0%,#00447e 100%); /* W3C */
+    background: #98f000; /* Old browsers */
+    background: -moz-linear-gradient(top,  #98f000 0%, #00c479 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#98f000), color-stop(100%,#00c479)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #98f000 0%,#00c479 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #98f000 0%,#00c479 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #98f000 0%,#00c479 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #98f000 0%,#00c479 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98f000', endColorstr='#00c479',GradientType=0 ); /* IE6-9 */
     text-shadow: 0 1px rgba(0, 0, 0, .15); 
-    box-shadow: 0 1px #00447e;
+    box-shadow: 0 1px #00aa69;
 }
+
+.user-details li:active {
+    background: #00c479;
+} 
 
 .nav-items .search {
     padding: 0;
     border-left: 0;
-}
-
-.nav-items .active {
-    background-color: #0079df;   
 }
 
 .search input {
@@ -560,17 +568,17 @@ li.nav-menu:hover {
     border: 0;
     display: inline-block;
     height: 46px;
-    background-color: #1381df;
+    background-color: #1589ec;
     color: #fff;
     font-style: italic;
     font-size: 1.1em;
     text-transform: capitalize;
-    box-shadow: inset 2px 0 4px rgba(0, 0, 0, .06);
 }
 
 .search input:focus {
     outline: none;
     background-color: #0079df;
+    box-shadow: inset 0 -2px  4px rgba(0, 0, 0, .06);
 }
 
 .search ::-webkit-input-placeholder {
@@ -581,7 +589,7 @@ li.nav-menu:hover {
     color: #80c5ff; 
 }
  
- .search :-ms-input-placeholder {
+.search :-ms-input-placeholder {
     color: #80c5ff;
 }
  
@@ -590,16 +598,25 @@ li.nav-menu:hover {
 }
 
 li.arrow-box {
-    border-right-color: #1b96ff;
-    background-color: #1b96ff;
+    border-right: 0;
+    background: #00b4ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #00b4ff 0%, #1589ec 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b4ff), color-stop(100%,#1589ec)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #00b4ff 0%,#1589ec 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #00b4ff 0%,#1589ec 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #00b4ff 0%,#1589ec 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #00b4ff 0%,#1589ec 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b4ff', endColorstr='#1589ec',GradientType=0 ); /* IE6-9 */
     padding: 0 10px;
 }
 
 li.arrow-box:hover {
-    background-color: #1b96ff;
+    background-color: #1589ec;
 }
 .arrow-box {
     position: relative;
+    color: #0079df;
+    text-shadow: 0 1px rgba(255, 255, 255, .15);
 }
 
 .arrow-box:after {
@@ -613,8 +630,8 @@ li.arrow-box:hover {
 }
 
 .arrow-box:after {
-	border-color: rgba(136, 183, 213, 0);
-	border-left-color: #1b96ff;
+	border-color: rgba(11, 158, 246, 0);
+	border-left-color: #0b9ef6;
 	border-width: 6px;
 	top: 50%;
 	margin-top: -6px;
