@@ -639,7 +639,7 @@ li.arrow-box:hover {
   height: 198px;
   position: relative;
   overflow: hidden;
-  background: url(http://subtlepatterns.com/patterns/blackorchid.png);
+  background-color: #111;
 }
 
 .carousel li {
@@ -677,8 +677,7 @@ li.arrow-box:hover {
 }
 
 .carousel-titles li {
-    transition: color 600ms;
-    transition: box-shadow 800ms;
+    transition: box-shadow 600ms, color 800ms;
     cursor: pointer;
     padding-bottom: 2px;
     padding-right: 20px;

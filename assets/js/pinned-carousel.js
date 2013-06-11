@@ -3,8 +3,8 @@ $(document).ready(function() {
   // settings
   var carousel = $('.carousel');
   var slide = 'li';
-  var transitionTime = 1000;
-  var slideDuration = 5000;
+  var transitionTime = 800;
+  var slideDuration = 6800;
 
   function slides(){
     return carousel.find(slide);
@@ -44,15 +44,17 @@ $(document).ready(function() {
   var loop = setInterval(loopFn, transitionTime + slideDuration); 
 
   titles().click(function(){
-    clearInterval(loop); // reset timer
     var i = titles().index(this);
-    titles().removeClass('active');    
-    titles().eq(i).addClass('active'); 
-    slides().removeClass('active');
-    slides().fadeOut(transitionTime/2);
-    slides().eq(i).fadeIn(transitionTime/2);
-    slides().eq(i).addClass('active');
-    loop = setInterval(loopFn, transitionTime + slideDuration);
+    if(!$(titles().eq(i)).hasClass('active')) {
+        clearInterval(loop); // reset timer
+        titles().removeClass('active');    
+        titles().eq(i).addClass('active'); 
+        slides().removeClass('active');
+        slides().fadeOut(transitionTime/2);
+        slides().eq(i).fadeIn(transitionTime/2);
+        slides().eq(i).addClass('active');
+        loop = setInterval(loopFn, transitionTime + slideDuration);
+    }
   });
 
 });
