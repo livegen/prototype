@@ -1,30 +1,34 @@
-jQuery(function($) { 
+$(document).ready(function() { 
 
   // settings
   var carousel = $('.carousel');
   var slide = 'li';
-  var transition_time = 1000;
-  var time_between_slides = 5000;
+  var transitionTime = 1000;
+  var slideDuration = 5000;
 
   function slides(){
     return carousel.find(slide);
   }
   
   function titles(){
-    return $('.carousel-content li');
+    return $('.carousel-titles li');
   }
   
   // loop
   function loopFn(){
+      
     var i = carousel.find(slide + '.active').index();
     
     slides().eq(i).removeClass('active');
-    slides().eq(i).fadeOut(transition_time);
+    slides().eq(i).fadeOut(transitionTime);
     titles().eq(i).removeClass('active');
     
-    if (slides().length == i + 1) i = -1; // loop to start
+    // loop to start
+    if (slides().length == i + 1) {
+        i = -1; 
+    }
     
-    slides().eq(i + 1).fadeIn(transition_time);
+    slides().eq(i + 1).fadeIn(transitionTime);
     slides().eq(i + 1).addClass('active');
     titles().eq(i + 1).addClass('active');
   }
@@ -33,11 +37,11 @@ jQuery(function($) {
 
   // set active classes
   slides().first().addClass('active');
-  slides().first().fadeIn(transition_time);
+  slides().first().fadeIn(transitionTime);
   titles().first().addClass('active');
 
   // auto scroll 
-  var loop = setInterval(loopFn, transition_time +  time_between_slides); 
+  var loop = setInterval(loopFn, transitionTime + slideDuration); 
 
   titles().click(function(){
     clearInterval(loop); // reset timer
@@ -45,10 +49,10 @@ jQuery(function($) {
     titles().removeClass('active');    
     titles().eq(i).addClass('active'); 
     slides().removeClass('active');
-    slides().fadeOut(transition_time / 2);
-    slides().eq(i).fadeIn(transition_time / 2);
+    slides().fadeOut(transitionTime/2);
+    slides().eq(i).fadeIn(transitionTime/2);
     slides().eq(i).addClass('active');
-    loop = setInterval(loopFn, transition_time +  time_between_slides);
+    loop = setInterval(loopFn, transitionTime + slideDuration);
   });
 
 });

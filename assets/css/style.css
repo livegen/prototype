@@ -655,7 +655,7 @@ li.arrow-box:hover {
     border: solid 1px #e5e5e5;
 }
 
-.carousel-content {
+.carousel-titles {
     position: absolute;
     display: table;
     right: 0;
@@ -671,12 +671,12 @@ li.arrow-box:hover {
     text-shadow: 0 1px rgba(0, 0, 0, .4);    
 }
 
-.carousel-content ul {
+.carousel-titles ul {
     display: table-cell;
     vertical-align: middle;
 }
 
-.carousel-content li {
+.carousel-titles li {
     transition: color 600ms;
     transition: box-shadow 800ms;
     cursor: pointer;
@@ -684,11 +684,11 @@ li.arrow-box:hover {
     padding-right: 20px;
 }
 
-.carousel-content li:hover {
+.carousel-titles li:hover {
     color: #0c9cf5;
 }
 
-.carousel-content .active {
+.carousel-titles .active {
     font-weight: 700;
     color: #0c9cf5;
     box-shadow: inset -4px 0 #0c9cf5;
