@@ -87,14 +87,15 @@ a:hover {
     border-color: #111111;
     color: #ffffff;
 }
+
 .content-all {
     display: inline;
     position: absolute;
     right: -1px;
     top: -1px;
     padding: 0 16px;
-    border: solid #e5e5e5;
-    border-width: 1px 1px 0 1px; 
+    border: solid 1px #e5e5e5;
+    text-transform: uppercase;
 }
 
 .content-all a {
@@ -119,17 +120,13 @@ a:hover {
 }
 
 .filter:hover, .sort:hover, .content-all:hover {
-    background-color: #448ccb;
+    background-color: #0c9cf5;
     color: #ffffff;
-    border-color: #3575ad;
+    border-color: #0081d1;
 }
 
 .filter:hover .icon-filter, .sort:hover .icon-filter {
     color: #3575ad;
-}
-
-.content-all {
-    text-transform: uppercase;
 }
 
 .filter-platforms, .sort-criteria {
@@ -137,7 +134,7 @@ a:hover {
 }
 
 .filter-platform-checked {
-    box-shadow: inset 0 4px #448ccb;
+    box-shadow: inset 0 4px #0c9cf5;
 }
 
 .content-roll {
@@ -162,9 +159,9 @@ a:hover {
 }
 
 .content-roll-load:hover {
-    background-color: #448ccb;
+    background-color: #0c9cf5;
     color: #ffffff;
-    border-color: #448ccb;
+    border-color: #0081d1;
     box-shadow: inset 0 1px rgba(0, 0, 0, .1);
 }
 
@@ -492,6 +489,7 @@ li.nav-menu:hover {
     width: 174px;
     cursor: default;
     border-bottom: solid 4px #53b0ff;
+    z-index: 999;
 }
 
 .nav-menu:hover ul {
