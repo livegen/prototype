@@ -41,14 +41,31 @@
                 </ul>
             </div>
         </div>
-    <!--newsroll    -->
-            <div class="content-roll-wrapper">
+    <!--content-->
+        <div class="content-wrapper">
+            <!--carousel-->
+            <div class="carousel-wrapper">
+                <div class="carousel-content">
+                    <ul>
+                        <li>CS:GO The International</li>
+                        <li>The psychology of Link</li>
+                        <li>Indie games Hall of Fame</li>
+                    </ul>
+                </div>
+                <ul class="carousel">
+                    <li><a href="#CSGO"><img src="assets/img/cs-go.png"/></a></li>
+                    <li><a href="#TLOZ"><img src="assets/img/tloz.png"/></a></li>
+                    <li><a href="#BASTION"><img src="assets/img/thekid.png"/></a></li>
+                </ul>
+            </div>
+            <!--content settings-->
             <div class="content-filter">
                 <div class="filter">
-                    <span class="title">filtrer</span><span class="filter-platforms" id="filter-platform"></span><i class="icon-filter"></i>
-                </div>
+                    <span class="title">filtrer</span>
+                    <span id="filter-platform"></span></div>
                 <div class="sort">
-                    <span class="title">trier</span><span class="sort-criteria" id="sort-criteria"></span><i class="icon-filter"></i>
+                    <span class="title">trier</span>
+                    <span id="sort-criteria"></span>
                 </div>
                 <div class="content-all">
                     <a href="#">
@@ -74,6 +91,7 @@
                     <li><input type="radio" name="sort" data-sort-id="POP" data-sort-label="Par popularité"/><label>Trier par popularité</label></li>
                 </ul>
             </div>
+            <!--content roll-->
             <ul class="content-roll">
                 <!--<li class="content-item star-items">                    -->
                 <!--    <ul>-->
@@ -277,7 +295,8 @@
         </div>
         
         <script type="text/javascript" src="assets/js/lib/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="assets/js/news.roll.js"></script>
+        <script type="text/javascript" src="assets/js/news-roll.js"></script>
+        <script type="text/javascript" src="assets/js/pinned-carousel.js"></script>
         
     </body>
 
