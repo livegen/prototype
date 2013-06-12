@@ -58,12 +58,14 @@ $(document).ready(function() {
   // init slides
 
   slides().fadeOut();
+  description.hide();
 
   // display first slide
   slides().first().addClass('active');
   slides().first().fadeIn(transitionTime);
   titles().first().addClass('active');
   description.html(titles().first().attr('data-description'));
+  description.fadeIn();
 
   // auto scroll 
   var loop = setInterval(loopFn, transitionTime + slideDuration); 
