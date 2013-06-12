@@ -659,12 +659,12 @@ li.arrow-box:hover {
     position: absolute;
     display: table;
     right: 0;
+    bottom: 0;
     z-index: 99;
-    height: 198px;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
-    font-size: .8em;
+    font-size: .6em;
     text-shadow: 0 1px rgba(0, 0, 0, .4);    
 }
 
@@ -681,6 +681,7 @@ li.arrow-box:hover {
     background: #000;
     background: rgba(0, 0, 0, .8);
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .carousel-titles li:hover {

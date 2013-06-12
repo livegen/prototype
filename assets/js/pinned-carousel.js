@@ -32,6 +32,25 @@ $(document).ready(function() {
     slides().eq(i + 1).addClass('active');
     titles().eq(i + 1).addClass('active');
   }
+  
+  // freez loop
+  function freezLoop(slideIndex){
+    var i = slideIndex;
+    clearInterval(loop); // reset timer
+    titles().removeClass('active');    
+    titles().eq(i).addClass('active'); 
+    slides().removeClass('active');
+    slides().hide();
+    slides().eq(i).show();
+    slides().eq(i).addClass('active');    
+  }
+  
+  // resume loop
+  function resumeLoop(){
+        loop = setInterval(loopFn, transitionTime + slideDuration);
+  }
+  
+  // init slides
 
   slides().fadeOut();
 
@@ -43,18 +62,22 @@ $(document).ready(function() {
   // auto scroll 
   var loop = setInterval(loopFn, transitionTime + slideDuration); 
 
-  titles().click(function(){
-    var i = titles().index(this);
-    if(!$(titles().eq(i)).hasClass('active')) {
-        clearInterval(loop); // reset timer
-        titles().removeClass('active');    
-        titles().eq(i).addClass('active'); 
-        slides().removeClass('active');
-        slides().fadeOut(transitionTime/2);
-        slides().eq(i).fadeIn(transitionTime/2);
-        slides().eq(i).addClass('active');
+  // freez on hovers
+  titles().hover(
+    function(){
+        var i = titles().index(this);    
+        freezLoop(i);   
+    }, 
+    function(){
         loop = setInterval(loopFn, transitionTime + slideDuration);
-    }
-  });
+    });
+    
+  slides().hover(
+    function() {
+        var i = slides().index(this);
+        freezLoop(i);
+    }, 
+    resumeLoop
+  );
 
 });
