@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   // settings
   var carousel = $('.carousel');
+  var description = $('#slide-description');
   var slide = 'li';
   var transitionTime = 800;
   var slideDuration = 6800;
@@ -22,7 +23,7 @@ $(document).ready(function() {
     slides().eq(i).removeClass('active');
     slides().eq(i).fadeOut(transitionTime);
     titles().eq(i).removeClass('active');
-    
+    description.hide();
     // loop to start
     if (slides().length == i + 1) {
         i = -1; 
@@ -30,7 +31,10 @@ $(document).ready(function() {
     
     slides().eq(i + 1).fadeIn(transitionTime);
     slides().eq(i + 1).addClass('active');
-    titles().eq(i + 1).addClass('active');
+    titles().eq(i + 1).addClass('active');    
+    description.html(titles().eq(i + 1).attr('data-description'));
+    description.fadeIn(transitionTime);
+    
   }
   
   // freez loop
@@ -42,7 +46,8 @@ $(document).ready(function() {
     slides().removeClass('active');
     slides().hide();
     slides().eq(i).show();
-    slides().eq(i).addClass('active');    
+    slides().eq(i).addClass('active'); 
+    description.html(titles().eq(i).attr('data-description'));
   }
   
   // resume loop
@@ -54,10 +59,11 @@ $(document).ready(function() {
 
   slides().fadeOut();
 
-  // set active classes
+  // display first slide
   slides().first().addClass('active');
   slides().first().fadeIn(transitionTime);
   titles().first().addClass('active');
+  description.html(titles().first().attr('data-description'));
 
   // auto scroll 
   var loop = setInterval(loopFn, transitionTime + slideDuration); 

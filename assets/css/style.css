@@ -653,19 +653,39 @@ li.arrow-box:hover {
     display: inline-block;
     position: relative;
     border: solid 1px #e5e5e5;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-align: center;
 }
 
 .carousel-titles {
     position: absolute;
     display: table;
     right: 0;
-    bottom: 0;
+    top: 0;
     z-index: 99;
-    text-align: left;
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
+    text-align: center;
+
     font-size: .6em;
     text-shadow: 0 1px rgba(0, 0, 0, .4);    
+}
+
+.carousel-descriptions {
+    position: absolute;
+    display: table;
+    left: 0;
+    bottom: 0;
+    height: 48px;
+    line-height: 48px;
+    z-index: 99;
+    width: 100%;
+    font-size: 1em;
+    text-shadow: 0 1px rgba(0, 0, 0, .4); 
+    background: #000;
+    background: rgba(0, 0, 0, .8);
+    font-weight: 700;
+    cursor: default;
 }
 
 .carousel-titles ul {
@@ -676,19 +696,15 @@ li.arrow-box:hover {
 .carousel-titles li {
     transition: box-shadow 600ms, color 800ms;
     cursor: pointer;
-    padding: 5px 20px;
-    margin-bottom: 4px;
+    height: 32px;
+    line-height: 32px;
+    width: 180px;
+    margin-top: 4px;
     background: #000;
     background: rgba(0, 0, 0, .8);
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.carousel-titles li:hover {
-    color: #0c9cf5;
 }
 
 .carousel-titles .active {
-    color: #0c9cf5;
+    font-weight: 700;
     box-shadow: inset 4px 0 #0c9cf5;
 }
