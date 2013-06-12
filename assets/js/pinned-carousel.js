@@ -23,7 +23,6 @@ $(document).ready(function() {
     slides().eq(i).removeClass('active');
     slides().eq(i).fadeOut(transitionTime);
     titles().eq(i).removeClass('active');
-    description.hide();
     // loop to start
     if (slides().length == i + 1) {
         i = -1; 
@@ -32,9 +31,7 @@ $(document).ready(function() {
     slides().eq(i + 1).fadeIn(transitionTime);
     slides().eq(i + 1).addClass('active');
     titles().eq(i + 1).addClass('active');    
-    description.html(titles().eq(i + 1).attr('data-description'));
-    description.fadeIn(transitionTime);
-    
+    description.html(titles().eq(i + 1).attr('data-description'));    
   }
   
   // freez loop
