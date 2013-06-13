@@ -3,6 +3,7 @@ $(document).ready(function() {
   // settings
   var carousel = $('.carousel');
   var description = $('#slide-description');
+  var subtitle = $('#slide-subtitle');
   var slide = 'li';
   var transitionTime = 800;
   var slideDuration = 6800;
@@ -32,6 +33,7 @@ $(document).ready(function() {
     slides().eq(i + 1).addClass('active');
     titles().eq(i + 1).addClass('active');    
     description.html(titles().eq(i + 1).attr('data-description'));    
+    subtitle.html(titles().eq(i + 1).attr('data-subtitle'));
   }
   
   // freez loop
@@ -45,6 +47,7 @@ $(document).ready(function() {
     slides().eq(i).show();
     slides().eq(i).addClass('active'); 
     description.html(titles().eq(i).attr('data-description'));
+    subtitle.html(titles().eq(i).attr('data-subtitle'));
   }
   
   // resume loop
@@ -62,6 +65,7 @@ $(document).ready(function() {
   slides().first().fadeIn(transitionTime);
   titles().first().addClass('active');
   description.html(titles().first().attr('data-description'));
+  subtitle.html(titles().first().attr('data-subtitle'));
   description.fadeIn();
 
   // auto scroll 
