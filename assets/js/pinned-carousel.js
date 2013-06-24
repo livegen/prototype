@@ -77,9 +77,8 @@ $(document).ready(function() {
         var i = titles().index(this);    
         freezLoop(i);   
     }, 
-    function(){
-        loop = setInterval(loopFn, transitionTime + slideDuration);
-    });
+    resumeLoop
+    );
     
   slides().hover(
     function() {
