@@ -3,3 +3,4 @@
 
 # sass files
 sass/
+.sass-cache/
