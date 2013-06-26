@@ -4,6 +4,10 @@ html, body, div {
     font-size: 100%;
     vertical-align: baseline;
 }
+
+body {
+    background: url(http://subtlepatterns.com/patterns/groovepaper.png);
+}
 li {
     list-style-type: none;
 }
@@ -32,8 +36,9 @@ a:hover {
 .sidebar-review-wrapper {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .08);
     margin-left: 4px;
+    background: #fff;
 }
-.sidebar-review-header {
+.side-element-header {
     text-align: center;
     font-size: .6em;
     text-transform: uppercase;
@@ -115,7 +120,7 @@ a:hover {
     text-transform: uppercase;
     font-size: .7em;
     color: #707070;
-    border-radius: 0 0 4px 0;
+    border-bottom-right-radius: 4px;
 }
 .sidebar-review-wrapper .all .icon-caret-right {
     margin-left: 10px;
@@ -167,6 +172,7 @@ a:hover {
 .content-settings {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
     border-width: 0 1px 0 1px;
+    background: #ffffff;
 }
 .content-settings li {
     display: table-cell;
@@ -284,20 +290,7 @@ a:hover {
     border: solid 1px #dfdfdf;
     margin-top: -1px;
 }
-.star-items {
-    background-color: #ffffff;
-    border-color: #dfdfdf;
-    max-width: 718px;
-}
-.star-items .item-authoring, .star-items .item-comment-count {
-    color: #ffffff;
-}
-.content-item:hover .star {
-    color: #fbde42;
-}
-.star {
-    font-size: 1.6em;
-}
+
 .item-platform {
     width: 72px;
     display: table-cell;
@@ -361,7 +354,7 @@ a:hover {
 .item-comment-count i {
     margin-right: 4px;
 }
-.item-popularity, .star-wrap {
+.item-popularity {
     width: 72px;
     display: table-cell;
     text-align: center;
@@ -430,41 +423,7 @@ a:hover {
     vertical-align: middle;
     height: 100px;
 }
-.star-wrap, .content-starred {
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-}
-.content-starred {
-    padding: 5px;
-    border-right: solid 1px #dfdfdf;
-}
-.star-items img {
-    display: block;
-    margin: 0;
-    width: 150px;
-    height: auto;
-    max-width: 150px;
-}
-.content-starred-hover {
-    position: absolute;
-    height: 84px;
-    width: 150px;
-    box-shadow: inset 0 90px rgba(0, 0, 0, .7);
-    display: none;
-}
-.starred-title {
-    position: absolute;
-    bottom: 0;
-    font-size: .7em;
-    line-height: 1.2em;
-    padding: 10px;
-    text-shadow: 0 1px #111111;
-    color: #ffffff;
-}
-.content-starred:hover .content-starred-hover {
-    display: inline;
-}
+
 /* Navbar style */
  .navbar {
     margin: 0;

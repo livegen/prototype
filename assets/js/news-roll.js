@@ -21,7 +21,7 @@ var sortSettings =  $('#sort-settings');
 
 var platformHoverClass;
 
-$('.content-item').not('.star-items').hover(
+$('.content-item').hover(
     
     function(){
         
