@@ -34,16 +34,6 @@ $font-reading: 'PT Sans', 'Georgia', sans-serif;
     border-#{$vert}-#{$horz}-radius: $radius;
 }
 
-@mixin rounded-slash($radius: 4px) {
-    border-top-right-radius: $radius;
-    border-bottom-left-radius: $radius;
-}
-
-@mixin rounded-backslash($radius: 4px) {
-    border-top-left-radius: $radius;
-    border-bottom-right-radius: $radius;
-}
-
 @mixin rounded-horz($vert, $radius: 4px) {
     border-#{$vert}-right-radius: $radius;
     border-#{$vert}-left-radius: $radius;
@@ -52,11 +42,6 @@ $font-reading: 'PT Sans', 'Georgia', sans-serif;
 @mixin rounded-vert($horz, $radius: 4px) {
     border-top-#{$horz}-radius: $radius;
     border-bottom-#{$horz}-radius: $radius;
-}
-
-@mixin rounded-three($vert, $horz, $radius: 4px) {
-    border-radius: 4px;
-    border-#{$vert}-#{$horz}-radius: 0;
 }
 
     // gradients
