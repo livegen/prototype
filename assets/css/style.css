@@ -395,6 +395,8 @@ a:hover {
   display: table;
   border: solid 1px #dfdfdf;
   margin-top: -1px; }
+  .content-item:hover .platform-capsule {
+    box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.4); }
 
 .item-platform {
   width: 72px;
@@ -412,7 +414,7 @@ a:hover {
   color: white;
   line-height: 42px;
   display: inline-block;
-  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.4); }
+  transition: box-shadow 300ms; }
 
 .item-thumbnail {
   width: 126px; }
