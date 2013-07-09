@@ -120,7 +120,7 @@ a:hover {
     background: $blue;
     display: inline-block;
     height: $height-navbar;   
-    box-shadow: 0 1px darken($blue, 8%), inset 0 1px rgba(255, 255, 255, .2);
+    box-shadow: 0 1px darken($blue, 8%), inset 0 1px rgba(255, 255, 255, .2), inset 0 -1px 2px rgba(0, 0, 0, .08);
     min-width: 100%;
 }
 
@@ -281,9 +281,8 @@ a:hover {
 }
 
 .search-focused {
-    background: #244459;
-    background: rgba(0, 0, 0, .2);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+    background: darken($blue, 10%);
+    box-shadow: inset 0 -1px 3px rgba(0, 0, 0, .12);
 }
 
 .main-wrapper {
@@ -552,13 +551,16 @@ a:hover {
     padding-left: 20px;
     line-height: 16px;
     @include text(inherit, .7em, #707070, inherit, 700);
+    i {
+        margin-right: 4px;
+    }
+}
+
+.item-comment-count {
     &:after {
         font-weight: 400;
         content:'commentaires';
         margin-left: 4px;
-    }
-    i {
-        margin-right: 4px;
     }
 }
 
@@ -719,6 +721,104 @@ a:hover {
     padding: 0 20px;
     font-weight: 400;
 }
+
+/* post style */
+.post {
+    margin-top: -5px;
+    display: table;    
+    border-collapse: collapse;
+    .side {
+        display: table-cell;
+        width: 246px;
+        text-align: center;   
+        font-weight: 700;
+        vertical-align: top;
+        border: $border-main;
+        border-bottom: 0;
+        border-left: 0;
+        
+        > div {
+            border: {
+                style: solid;
+                color: #dfdfdf;
+                width: 0 0 1px 1px;
+            }
+        }
+    }
+    .info {
+        border-right: 0;
+        text-transform: uppercase;
+        height: 86px;
+        display: table-cell;
+        vertical-align: middle;
+        width: inherit;
+    }
+    .category {
+        font-size: .7em;
+    }
+    .time {
+        font-size: .8em;
+    }
+    .author {
+        margin-top: -1px;
+        padding: 24px;        
+        border-right: 0;
+        border-bottom: solid 1px #dfdfdf;
+        position: relative;
+        .name {
+            font-size: 1.2em;
+        }
+        .quote {
+            font-size: .8em;
+            color: #666;
+        }
+        .twitter {
+            font-size: .9em;
+        }
+        
+        &:before {
+            content: 'par';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            margin-left: 105px;
+            padding: 0 8px;
+            @include text(inherit, .65em, #aaa, uppercase);
+            background-color: #fff;
+            border: $border-main;
+            @include rounded(7px);
+        }
+        div {
+            margin: 6px 0;
+        }
+    }
+    
+    .main {
+        display: table-cell;
+        vertical-align: top;
+        width: 692px; 
+        border: $border-main;
+    }
+    
+    .meta {
+        height: 86px;
+        border-bottom: solid 1px #dfdfdf;
+    }
+    
+    .content {
+        padding: 36px;
+        font-family: $font-reading;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        h3 {
+            margin-top: 0;
+            color: #666;
+        }
+    }
+}
+
 
 
 

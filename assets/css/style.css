@@ -23,7 +23,7 @@ a:hover {
   background: #2d95ee;
   display: inline-block;
   height: 46px;
-  box-shadow: 0 1px #1281e0, inset 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px #1281e0, inset 0 1px rgba(255, 255, 255, 0.2), inset 0 -1px 2px rgba(0, 0, 0, 0.08);
   min-width: 100%; }
 
 .container {
@@ -164,9 +164,8 @@ a:hover {
     outline: none; }
 
 .search-focused {
-  background: #244459;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); }
+  background: #117cd7;
+  box-shadow: inset 0 -1px 3px rgba(0, 0, 0, 0.12); }
 
 .main-wrapper {
   width: 940px;
@@ -456,12 +455,13 @@ a:hover {
   text-transform: inherit;
   font-weight: 700;
   color: #707070; }
-  .item-authoring:after, .item-comment-count:after {
-    font-weight: 400;
-    content: 'commentaires';
-    margin-left: 4px; }
   .item-authoring i, .item-comment-count i {
     margin-right: 4px; }
+
+.item-comment-count:after {
+  font-weight: 400;
+  content: 'commentaires';
+  margin-left: 4px; }
 
 .item-popularity {
   width: 72px;
@@ -594,3 +594,80 @@ a:hover {
   font-size: .8em;
   padding: 0 20px;
   font-weight: 400; }
+
+/* post style */
+.post {
+  margin-top: -5px;
+  display: table;
+  border-collapse: collapse; }
+  .post .side {
+    display: table-cell;
+    width: 246px;
+    text-align: center;
+    font-weight: 700;
+    vertical-align: top;
+    border: solid 1px #dfdfdf;
+    border-bottom: 0;
+    border-left: 0; }
+    .post .side > div {
+      border-style: solid;
+      border-color: #dfdfdf;
+      border-width: 0 0 1px 1px; }
+  .post .info {
+    border-right: 0;
+    text-transform: uppercase;
+    height: 86px;
+    display: table-cell;
+    vertical-align: middle;
+    width: inherit; }
+  .post .category {
+    font-size: .7em; }
+  .post .time {
+    font-size: .8em; }
+  .post .author {
+    margin-top: -1px;
+    padding: 24px;
+    border-right: 0;
+    border-bottom: solid 1px #dfdfdf;
+    position: relative; }
+    .post .author .name {
+      font-size: 1.2em; }
+    .post .author .quote {
+      font-size: .8em;
+      color: #666; }
+    .post .author .twitter {
+      font-size: .9em; }
+    .post .author:before {
+      content: 'par';
+      position: absolute;
+      top: -8px;
+      left: 0;
+      margin-left: 105px;
+      padding: 0 8px;
+      text-align: inherit;
+      font-size: 0.65em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: #aaaaaa;
+      background-color: #fff;
+      border: solid 1px #dfdfdf;
+      border-radius: 7px; }
+    .post .author div {
+      margin: 6px 0; }
+  .post .main {
+    display: table-cell;
+    vertical-align: top;
+    width: 692px;
+    border: solid 1px #dfdfdf; }
+  .post .meta {
+    height: 86px;
+    border-bottom: solid 1px #dfdfdf; }
+  .post .content {
+    padding: 36px;
+    font-family: "PT Sans", "Georgia", sans-serif; }
+    .post .content h2 {
+      margin-top: 0;
+      margin-bottom: 8px; }
+    .post .content h3 {
+      margin-top: 0;
+      color: #666; }

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700">
+        <title>Livegen - News Roll</title>
+    </head>
+    
+    <body>
+        <div class="content-wrapper">
+            <div class="content-filter">
+                <div class="filter"><span class="title">filtrer</span><span class="filter-platforms" id="filter-platform"></span></div>
+                <div class="sort"><span class="title">trier</span><span class="sort-criteria" id="sort-criteria"></span></div>
+                <div class="content-all">
+                    <a href="#">
+                        <strong>tous</strong> les billets<i class="icon-caret-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="content-settings" id="filter-settings">                
+                <ul>
+                    <li><input type="checkbox" data-platform-id="MULTI" data-platform-label="MULTI"/><label>MULTI</label></li>
+                    <li><input type="checkbox" data-platform-id="PC" data-platform-label="PC" /><label>PC</label></li>
+                    <li><input type="checkbox" data-platform-id="PS3" data-platform-label="PS3" /><label>PS3</label></li>
+                    <li><input type="checkbox" data-platform-id="360" data-platform-label="360" /><label>360</label></li>
+                    <li><input type="checkbox" data-platform-id="WIIU" data-platform-label="Wii U" /><label>Wii U</label></li>
+                    <li><input type="checkbox" data-platform-id="3DS" data-platform-label="3DS" /><label>3DS</label></li>
+                    <li><input type="checkbox" data-platform-id="PSVITA" data-platform-label="PS Vita" /><label>PS Vita</label></li>
+                    <li><input type="checkbox" data-platform-id="TOUCH" data-platform-label="Touch" /><label>Touch</label></li>
+                </ul>
+            </div>
+            <div class="content-settings" id="sort-settings">                
+                <ul>
+                    <li><input type="radio" name="sort" data-sort-id="DATE" data-sort-label="Par date"/><label>Trier par date de publication</label></li>
+                    <li><input type="radio" name="sort" data-sort-id="POP" data-sort-label="Par popularité"/><label>Trier par popularité</label></li>
+                </ul>
+            </div>
+            <ul class="content-roll">
+                <li class="content-item star-items">                    
+                    <ul>
+                        <li class="content-starred">
+                            <div class="content-starred-hover">
+                                <div class="starred-title">XCOM Second Wave options officially released by Firaxis</div>
+                            </div>
+                            <img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/xcom.png" alt ="XCOM" />
+                        </li>
+                        <li class="content-starred">
+                            <div class="content-starred-hover">
+                                <div class="starred-title">Counter-Strike: Global Offensive patch adds Weapons Course and Zombie Mod support</div>
+                            </div>
+                            <img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/csgo.png" alt ="CS:GO" />
+                        </li>
+                        <li class="content-starred">
+                            <div class="content-starred-hover">
+                                <div class="starred-title">Halo 4 pulls in $220 million in 24 hours</div>
+                            </div>
+                            <img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/halo4.png" alt ="HALO" />
+                        </li>
+                        <li class="content-starred">
+                            <div class="content-starred-hover">
+                                <div class="starred-title">Max Payne 3 DLC to add new multiplayer modes, map and black and white
+                                mode for free                                     
+                                </div>
+                            </div>
+                            <img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/mp3.png" alt ="MP3" />
+                        </li>
+                    </ul>
+                    <div class="star-wrap">                        
+                            <div class="star"><i class="icon-star"></i></div>                            
+                    </div>
+                </li>
+                <li class="content-item">
+                    <div class="item-platform">
+                        <div class="platform-capsule platform-pc">PC</div>
+                    </div>
+                    <div class="item-thumbnail">
+                    <div class="item-thumbnail-frame"><img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/csgo.png" alt ="CS:GO" /></div>
+                    </div>
+                    <div class="item-details">
+                        <ul>
+                            <li class="item-authoring">
+                                <a href="#">MrGame&amp;Watch</a>
+                                <span class="time-stamp">il y a 20 minutes</span>                            
+                            </li>
+                            <li class="item-title">
+                                Counter-Strike: Global Offensive patch adds Weapons Course and Zombie Mod support                             
+                            </li>
+                            <li class="item-comment-count"><i class="icon-comment"></i>42</li>
+                        </ul>
+                    </div>
+                    <div class="item-popularity">
+                        <ul>
+                            <li class="hp">HP</li>
+                            <li class="heart"><i class="icon-heart"></i></li>
+                            <li class="popularity">101</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <div class="item-platform">
+                        <div class="platform-capsule platform-multi">MULTI</div>
+                    </div>
+                    <div class="item-thumbnail">
+                    <div class="item-thumbnail-frame"><img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/mp3.png" alt="Max Payne 3" /></div>
+                    </div>
+                    <div class="item-details">
+                        <ul>
+                            <li class="item-authoring">
+                                <a href="#">MrGame&amp;Watch</a>
+                                <span class="time-stamp">il y a 56 minutes</span>                            
+                            </li>
+                            <li class="item-title">
+                                Max Payne 3 DLC to add new multiplayer modes, map and black and white
+                                mode for free                             
+                            </li>
+                            <li class="item-comment-count"><i class="icon-comment"></i>69</li>
+                        </ul>
+                    </div>
+                    <div class="item-popularity">
+                        <ul>
+                            <li class="hp">HP</li>
+                            <li class="heart"><i class="icon-heart"></i></li>
+                            <li class="popularity">65</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <div class="item-platform">
+                        <div class="platform-capsule platform-360">360</div>
+                    </div>
+                    <div class="item-thumbnail">
+                    <div class="item-thumbnail-frame"><img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/halo4.png" alt ="Halo 4"/></div>
+                    </div>
+                    <div class="item-details">
+                        <ul>
+                            <li class="item-authoring">
+                                <a href="#">MrGame&amp;Watch</a>
+                                <span class="time-stamp">il y a 2 heures</span>                            
+                            </li>
+                            <li class="item-title">
+                                Halo 4 pulls in $220 million in 24 hours                             
+                            </li>
+                            <li class="item-comment-count"><i class="icon-comment"></i>124</li>
+                        </ul>
+                    </div>
+                    <div class="item-popularity">
+                        <ul>
+                            <li class="hp">HP</li>
+                            <li class="heart"><i class="icon-heart"></i></li>
+                            <li class="popularity">99</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <div class="item-platform">
+                        <div class="platform-capsule platform-pc">PC</div>
+                    </div>
+                    <div class="item-thumbnail">
+                    <div class="item-thumbnail-frame"><img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/csgo.png" alt ="CS:GO" /></div>
+                    </div>
+                    <div class="item-details">
+                        <ul>
+                            <li class="item-authoring">
+                                <a href="#">MrGame&amp;Watch</a>
+                                <span class="time-stamp">il y a 20 minutes</span>                            
+                            </li>
+                            <li class="item-title">
+                                Counter-Strike: Global Offensive patch adds Weapons Course and Zombie Mod support                             
+                            </li>
+                            <li class="item-comment-count"><i class="icon-comment"></i>42</li>
+                        </ul>
+                    </div>
+                    <div class="item-popularity">
+                        <ul>
+                            <li class="hp">HP</li>
+                            <li class="heart"><i class="icon-heart"></i></li>
+                            <li class="popularity">101</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <div class="item-platform">
+                        <div class="platform-capsule platform-multi">MULTI</div>
+                    </div>
+                    <div class="item-thumbnail">
+                    <div class="item-thumbnail-frame"><img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/mp3.png" alt="Max Payne 3" /></div>
+                    </div>
+                    <div class="item-details">
+                        <ul>
+                            <li class="item-authoring">
+                                <a href="#">MrGame&amp;Watch</a>
+                                <span class="time-stamp">il y a 56 minutes</span>                            
+                            </li>
+                            <li class="item-title">
+                                Max Payne 3 DLC to add new multiplayer modes, map and black and white
+                                mode for free                             
+                            </li>
+                            <li class="item-comment-count"><i class="icon-comment"></i>69</li>
+                        </ul>
+                    </div>
+                    <div class="item-popularity">
+                        <ul>
+                            <li class="hp">HP</li>
+                            <li class="heart"><i class="icon-heart"></i></li>
+                            <li class="popularity">65</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <div class="item-platform">
+                        <div class="platform-capsule platform-360">360</div>
+                    </div>
+                    <div class="item-thumbnail">
+                    <div class="item-thumbnail-frame"><img src="https://dl.dropbox.com/u/284876/Livegen/prototype/img/news/halo4.png" alt ="Halo 4"/></div>
+                    </div>
+                    <div class="item-details">
+                        <ul>
+                            <li class="item-authoring">
+                                <a href="#">MrGame&amp;Watch</a>
+                                <span class="time-stamp">il y a 2 heures</span>                            
+                            </li>
+                            <li class="item-title">
+                                Halo 4 pulls in $220 million in 24 hours                             
+                            </li>
+                            <li class="item-comment-count"><i class="icon-comment"></i>124</li>
+                        </ul>
+                    </div>
+                    <div class="item-popularity">
+                        <ul>
+                            <li class="hp">HP</li>
+                            <li class="heart"><i class="icon-heart"></i></li>
+                            <li class="popularity">99</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="content-roll-load">Charger plus de contenu</div>
+        </div>
+        
+        <script type="text/javascript" src="assets/js/lib/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/news-roll.js"></script>
+    </body>
+
+</html>

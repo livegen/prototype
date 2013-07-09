@@ -4,3 +4,5 @@
 # sass files
 sass/
 .sass-cache/
+node_modules/
+templates/
