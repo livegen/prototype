@@ -1,5 +1,9 @@
 // variables
-
+$buff: #11c996;
+$nerf: #dd3949;
+$google: #d54937;
+$facebook: #3b5998;
+$twitter: #00aced;
 $link: #65aeee;
 $link-hover: #448ccb;
 $blue-light: #00b4ff;
@@ -588,7 +592,7 @@ a:hover {
 
 .popularity {
     display: inline-block;
-    padding: 0 3px;
+    padding: 1px 4px;
     border-radius: 3px;
     border: solid 1px #e1e1e1;
     box-shadow: inset 0 1px rgba(0, 0, 0, .06);
@@ -724,19 +728,15 @@ a:hover {
 
 /* post style */
 .post {
-    margin-top: -5px;
+    margin-top: 20px;
     display: table;    
-    border-collapse: collapse;
     .side {
         display: table-cell;
-        width: 246px;
+        width: 244px;
         text-align: center;   
         font-weight: 700;
-        vertical-align: top;
-        border: $border-main;
-        border-bottom: 0;
-        border-left: 0;
-        
+        vertical-align: top;  
+        border-top: $border-main;
         > div {
             border: {
                 style: solid;
@@ -760,6 +760,7 @@ a:hover {
         font-size: .8em;
     }
     .author {
+        cursor: default;
         margin-top: -1px;
         padding: 24px;        
         border-right: 0;
@@ -778,36 +779,190 @@ a:hover {
         
         &:before {
             content: 'par';
-            position: absolute;
-            top: -8px;
-            left: 0;
             margin-left: 105px;
-            padding: 0 8px;
-            @include text(inherit, .65em, #aaa, uppercase);
-            background-color: #fff;
-            border: $border-main;
-            @include rounded(7px);
         }
         div {
             margin: 6px 0;
         }
     }
     
+    .author, .topics {
+         &:before {
+            position: absolute;
+            top: -8px;
+            left: 0;
+            line-height: 15px;
+            padding: 0 8px;
+            @include text(center, .65em, #aaa, uppercase);
+            background-color: #fff;
+            border: $border-main;
+            @include rounded(7px);
+        }
+    }
+    
     .main {
         display: table-cell;
         vertical-align: top;
-        width: 692px; 
+        width: 694px; 
         border: $border-main;
     }
     
     .meta {
         height: 86px;
         border-bottom: solid 1px #dfdfdf;
+        display: table;
+        width: inherit;
     }
+    
+    .share {
+        padding: 0 36px;
+        vertical-align: middle;
+        display: table-cell; 
+        .share-on {
+            @include text(left, .7em, #aaa);
+            margin-right: 6px;
+            i {
+                margin-left: 6px;
+            }
+        }
+        
+        .btn-share {
+            display: inline-block;
+            @include rounded(2px);
+            margin-right: 6px;
+            a {
+                @include text(center, .7em, #fff, uppercase, 700);
+                padding: 6px 8px;
+                display: block;
+            }
+            i {
+                margin-right: 6px;
+                font-size: 1.2em;
+            }
+        }
+        .twitter {
+            background-color: $twitter;
+            &:hover {
+                background-color: lighten($twitter, 12%);
+            }
+        }
+        .facebook {
+            background-color: $facebook;
+            &:hover {
+                background-color: lighten($facebook, 12%);
+            }
+        }
+        .google {
+            background-color: $google;
+            &:hover {
+                background-color: lighten($google, 12%);
+            }
+        }
+    }   
+    
+    .rate {
+        display: table-cell;
+        width: 172px;
+    }
+    
+    .controls, .pop {
+        display: table-cell;
+        width: 86px;
+        height: 86px;         
+    }
+    
+    .controls {        
+        vertical-align: middle;
+        a {
+            @include text(center, .8em, #111, uppercase, 700);
+            cursor: pointer;            
+            display: block;
+            height: 36px;
+            line-height: 36px;
+            i {
+                margin-right: 8px;
+            }           
+        }   
+        .nerf {   
+            border: {
+                top: $border-main;
+                left: $border-main;
+            }
+            @include rounded-corner(top, left, 8px);
+            margin-top: 11px;
+        }   
+        .buff {   
+            border: {
+                bottom: $border-main;
+                left: $border-main;
+            }
+            @include rounded-corner(bottom, left, 8px);
+            margin-bottom: 12px;
+        } 
+       
+        .buff-active, .buff:hover {
+            color: #fff;
+            background-color: $buff;
+            border-color: darken($buff, 6%);
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .16);
+        }
+        .buff:active {
+            background-color: darken($buff, 8%);
+        }
+        .nerf-active, .nerf:hover {
+            color: #fff;
+            background-color: $nerf;
+            border-color: darken($nerf, 6%);
+            text-shadow: 0 1px rgba(0, 0, 0, .1);
+        }
+        .nerf:active {
+            background-color: darken($nerf, 8%);
+        }
+    }
+    
+    .pop {
+        text-align: center;
+        vertical-align: middle;
+        border-left: $border-main;
+    }
+    
+    
+    .topics {
+        padding: 24px 12px;
+        position: relative;
+        &:before {
+            content: 'en relation avec';           
+            margin-left: 70px;
+        }
+    }
+    
+    .game {
+        @include text(center, .7em, #333, uppercase, 700);
+        display: inline-block;
+        padding: 3px 6px;
+        &:not(:last-child) {
+            margin-bottom: 6px;
+        }        
+        border: solid 2px #dfdfdf;
+        @include rounded(6px);
+        &:before {
+            content: 'jeu';
+            color: #bbb;
+            margin-right: 4px;
+        }
+        cursor: default;
+        &:hover {
+            background-color: #333;
+            border-color: #333;
+            color: #fff;
+        }
+    }
+
     
     .content {
         padding: 36px;
         font-family: $font-reading;
+        text-align: justify;
         h2 {
             margin-top: 0;
             margin-bottom: 8px;
@@ -815,6 +970,15 @@ a:hover {
         h3 {
             margin-top: 0;
             color: #666;
+        }
+        
+        .video {
+            display: block;
+            text-align: center;
+            padding: 32px 0;
+            background-color: #111;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, .8);
+            @include rounded(6px);
         }
     }
 }

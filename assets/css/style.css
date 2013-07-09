@@ -483,7 +483,7 @@ a:hover {
 
 .popularity {
   display: inline-block;
-  padding: 0 3px;
+  padding: 1px 4px;
   border-radius: 3px;
   border: solid 1px #e1e1e1;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.06); }
@@ -597,18 +597,15 @@ a:hover {
 
 /* post style */
 .post {
-  margin-top: -5px;
-  display: table;
-  border-collapse: collapse; }
+  margin-top: 20px;
+  display: table; }
   .post .side {
     display: table-cell;
-    width: 246px;
+    width: 244px;
     text-align: center;
     font-weight: 700;
     vertical-align: top;
-    border: solid 1px #dfdfdf;
-    border-bottom: 0;
-    border-left: 0; }
+    border-top: solid 1px #dfdfdf; }
     .post .side > div {
       border-style: solid;
       border-color: #dfdfdf;
@@ -625,6 +622,7 @@ a:hover {
   .post .time {
     font-size: .8em; }
   .post .author {
+    cursor: default;
     margin-top: -1px;
     padding: 24px;
     border-right: 0;
@@ -639,35 +637,163 @@ a:hover {
       font-size: .9em; }
     .post .author:before {
       content: 'par';
-      position: absolute;
-      top: -8px;
-      left: 0;
-      margin-left: 105px;
-      padding: 0 8px;
-      text-align: inherit;
-      font-size: 0.65em;
-      text-transform: uppercase;
-      font-weight: 400;
-      color: #aaaaaa;
-      background-color: #fff;
-      border: solid 1px #dfdfdf;
-      border-radius: 7px; }
+      margin-left: 105px; }
     .post .author div {
       margin: 6px 0; }
+  .post .author:before, .post .topics:before {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    line-height: 15px;
+    padding: 0 8px;
+    text-align: center;
+    font-size: 0.65em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #aaaaaa;
+    background-color: #fff;
+    border: solid 1px #dfdfdf;
+    border-radius: 7px; }
   .post .main {
     display: table-cell;
     vertical-align: top;
-    width: 692px;
+    width: 694px;
     border: solid 1px #dfdfdf; }
   .post .meta {
     height: 86px;
-    border-bottom: solid 1px #dfdfdf; }
+    border-bottom: solid 1px #dfdfdf;
+    display: table;
+    width: inherit; }
+  .post .share {
+    padding: 0 36px;
+    vertical-align: middle;
+    display: table-cell; }
+    .post .share .share-on {
+      text-align: left;
+      font-size: 0.7em;
+      text-transform: none;
+      font-weight: 400;
+      color: #aaaaaa;
+      margin-right: 6px; }
+      .post .share .share-on i {
+        margin-left: 6px; }
+    .post .share .btn-share {
+      display: inline-block;
+      border-radius: 2px;
+      margin-right: 6px; }
+      .post .share .btn-share a {
+        text-align: center;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        padding: 6px 8px;
+        display: block; }
+      .post .share .btn-share i {
+        margin-right: 6px;
+        font-size: 1.2em; }
+    .post .share .twitter {
+      background-color: #00aced; }
+      .post .share .twitter:hover {
+        background-color: #2bc5ff; }
+    .post .share .facebook {
+      background-color: #3b5998; }
+      .post .share .facebook:hover {
+        background-color: #5476bd; }
+    .post .share .google {
+      background-color: #d54937; }
+      .post .share .google:hover {
+        background-color: #e0776a; }
+  .post .rate {
+    display: table-cell;
+    width: 172px; }
+  .post .controls, .post .pop {
+    display: table-cell;
+    width: 86px;
+    height: 86px; }
+  .post .controls {
+    vertical-align: middle; }
+    .post .controls a {
+      text-align: center;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #111111;
+      cursor: pointer;
+      display: block;
+      height: 36px;
+      line-height: 36px; }
+      .post .controls a i {
+        margin-right: 8px; }
+    .post .controls .nerf {
+      border-top: solid 1px #dfdfdf;
+      border-left: solid 1px #dfdfdf;
+      border-top-left-radius: 8px;
+      margin-top: 11px; }
+    .post .controls .buff {
+      border-bottom: solid 1px #dfdfdf;
+      border-left: solid 1px #dfdfdf;
+      border-bottom-left-radius: 8px;
+      margin-bottom: 12px; }
+    .post .controls .buff-active, .post .controls .buff:hover {
+      color: #fff;
+      background-color: #11c996;
+      border-color: #0fad81;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.16); }
+    .post .controls .buff:active {
+      background-color: #0ea37a; }
+    .post .controls .nerf-active, .post .controls .nerf:hover {
+      color: #fff;
+      background-color: #dd3949;
+      border-color: #d32435;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
+    .post .controls .nerf:active {
+      background-color: #ca2333; }
+  .post .pop {
+    text-align: center;
+    vertical-align: middle;
+    border-left: solid 1px #dfdfdf; }
+  .post .topics {
+    padding: 24px 12px;
+    position: relative; }
+    .post .topics:before {
+      content: 'en relation avec';
+      margin-left: 70px; }
+  .post .game {
+    text-align: center;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333333;
+    display: inline-block;
+    padding: 3px 6px;
+    border: solid 2px #dfdfdf;
+    border-radius: 6px;
+    cursor: default; }
+    .post .game:not(:last-child) {
+      margin-bottom: 6px; }
+    .post .game:before {
+      content: 'jeu';
+      color: #bbb;
+      margin-right: 4px; }
+    .post .game:hover {
+      background-color: #333;
+      border-color: #333;
+      color: #fff; }
   .post .content {
     padding: 36px;
-    font-family: "PT Sans", "Georgia", sans-serif; }
+    font-family: "PT Sans", "Georgia", sans-serif;
+    text-align: justify; }
     .post .content h2 {
       margin-top: 0;
       margin-bottom: 8px; }
     .post .content h3 {
       margin-top: 0;
       color: #666; }
+    .post .content .video {
+      display: block;
+      text-align: center;
+      padding: 32px 0;
+      background-color: #111;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+      border-radius: 6px; }
