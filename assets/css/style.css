@@ -96,8 +96,7 @@ a:hover {
     left: 0;
     width: 174px;
     cursor: default;
-    z-index: 999;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+    z-index: 999; }
   .nav-menu li:not(.header) {
     margin: 0;
     line-height: 20px;
@@ -147,8 +146,7 @@ a:hover {
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(58, 60, 63, 0.7) 100%);
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(58, 60, 63, 0.7) 100%);
   background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(58, 60, 63, 0.7) 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(58, 60, 63, 0.7) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b33a3c3f',GradientType=0 ); }
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(58, 60, 63, 0.7) 100%); }
 
 .search input {
   width: 128px;
@@ -206,7 +204,6 @@ a:hover {
       background: -o-linear-gradient(top, #fcfcfc 0%, #f2f4f4 100%);
       background: -ms-linear-gradient(top, #fcfcfc 0%, #f2f4f4 100%);
       background: linear-gradient(to bottom, #fcfcfc 0%, #f2f4f4 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f2f4f4', GradientType=0);
       text-shadow: 0 1px #fff; }
     .sidebar-section-wrapper .all:active {
       background: #f2f2f2; }
@@ -231,7 +228,6 @@ a:hover {
     background: -o-linear-gradient(top, #fcfcfc 0%, #f2f4f4 100%);
     background: -ms-linear-gradient(top, #fcfcfc 0%, #f2f4f4 100%);
     background: linear-gradient(to bottom, #fcfcfc 0%, #f2f4f4 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f2f4f4', GradientType=0);
     text-shadow: 0 1px #fff; }
   .sidebar-reviews li:active {
     background: #f2f2f2; }
@@ -298,7 +294,6 @@ a:hover {
       background: -o-linear-gradient(top, #fcfcfc 0%, #f2f4f4 100%);
       background: -ms-linear-gradient(top, #fcfcfc 0%, #f2f4f4 100%);
       background: linear-gradient(to bottom, #fcfcfc 0%, #f2f4f4 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f2f4f4', GradientType=0);
       text-shadow: 0 1px #fff; }
     .content-filter .all:active {
       background: #f2f2f2; }
@@ -622,7 +617,7 @@ a:hover {
   .post .time {
     font-size: .8em; }
   .post .author {
-    cursor: default;
+    cursor: pointer;
     margin-top: -1px;
     padding: 24px;
     border-right: 0;
@@ -634,12 +629,14 @@ a:hover {
       font-size: .8em;
       color: #666; }
     .post .author .twitter {
-      font-size: .9em; }
+      font-size: .8em; }
     .post .author:before {
       content: 'par';
       margin-left: 105px; }
     .post .author div {
       margin: 6px 0; }
+    .post .author:hover {
+      color: #2d95ee; }
   .post .author:before, .post .topics:before {
     position: absolute;
     top: -8px;
@@ -659,7 +656,7 @@ a:hover {
     vertical-align: top;
     width: 694px;
     border: solid 1px #dfdfdf; }
-  .post .meta {
+  .post .header {
     height: 86px;
     border-bottom: solid 1px #dfdfdf;
     display: table;
@@ -679,11 +676,11 @@ a:hover {
         margin-left: 6px; }
     .post .share .btn-share {
       display: inline-block;
-      border-radius: 2px;
+      border-radius: 3px;
       margin-right: 6px; }
       .post .share .btn-share a {
         text-align: center;
-        font-size: 0.7em;
+        font-size: 0.6em;
         text-transform: uppercase;
         font-weight: 700;
         color: white;
@@ -722,64 +719,53 @@ a:hover {
       cursor: pointer;
       display: block;
       height: 36px;
-      line-height: 36px; }
+      line-height: 36px;
+      border: solid 1px #dfdfdf;
+      transition: 120ms; }
       .post .controls a i {
         margin-right: 8px; }
-    .post .controls .nerf {
-      border-top: solid 1px #dfdfdf;
-      border-left: solid 1px #dfdfdf;
-      border-top-left-radius: 8px;
-      margin-top: 11px; }
+      .post .controls a:active {
+        color: #fff; }
     .post .controls .buff {
-      border-bottom: solid 1px #dfdfdf;
-      border-left: solid 1px #dfdfdf;
+      border-bottom-right-radius: 8px;
       border-bottom-left-radius: 8px;
-      margin-bottom: 12px; }
-    .post .controls .buff-active, .post .controls .buff:hover {
-      color: #fff;
+      margin-bottom: 12px;
+      margin-top: -1px; }
+      .post .controls .buff:hover:not(:active) {
+        box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.08); }
+        .post .controls .buff:hover:not(:active):not(.buff-active) {
+          color: #11c996; }
+    .post .controls .nerf {
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      margin-top: 12px;
+      margin-bottom: -1px; }
+      .post .controls .nerf:hover:not(:active) {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08); }
+        .post .controls .nerf:hover:not(:active):not(.nerf-active) {
+          color: #dd3949; }
+    .post .controls .buff-active, .post .controls .buff:active {
       background-color: #11c996;
       border-color: #0fad81;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.16); }
-    .post .controls .buff:active {
-      background-color: #0ea37a; }
-    .post .controls .nerf-active, .post .controls .nerf:hover {
-      color: #fff;
+      border-top-color: #11c996;
+      box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.12); }
+    .post .controls .nerf-active, .post .controls .nerf:active {
       background-color: #dd3949;
       border-color: #d32435;
-      text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
-    .post .controls .nerf:active {
-      background-color: #ca2333; }
+      border-bottom-color: #dd3949, 4%;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12); }
+    .post .controls .buff-active, .post .controls .nerf-active {
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12); }
   .post .pop {
     text-align: center;
-    vertical-align: middle;
-    border-left: solid 1px #dfdfdf; }
+    vertical-align: middle; }
   .post .topics {
     padding: 24px 12px;
     position: relative; }
     .post .topics:before {
       content: 'en relation avec';
       margin-left: 70px; }
-  .post .game {
-    text-align: center;
-    font-size: 0.7em;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #333333;
-    display: inline-block;
-    padding: 3px 6px;
-    border: solid 2px #dfdfdf;
-    border-radius: 6px;
-    cursor: default; }
-    .post .game:not(:last-child) {
-      margin-bottom: 6px; }
-    .post .game:before {
-      content: 'jeu';
-      color: #bbb;
-      margin-right: 4px; }
-    .post .game:hover {
-      background-color: #333;
-      border-color: #333;
-      color: #fff; }
   .post .content {
     padding: 36px;
     font-family: "PT Sans", "Georgia", sans-serif;
@@ -797,3 +783,59 @@ a:hover {
       background-color: #111;
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
       border-radius: 6px; }
+  .post .meta div {
+    font-family: "PT Sans", "Georgia", sans-serif; }
+  .post .meta .sources {
+    padding: 6px 36px;
+    text-align: left;
+    font-size: 0.8em;
+    text-transform: none;
+    font-weight: 400;
+    color: #999999; }
+    .post .meta .sources:before {
+      content: 'source : ';
+      text-transform: uppercase;
+      font-size: .9em; }
+  .post .meta .tags {
+    border-top: solid 1px #dfdfdf;
+    padding: 12px 36px; }
+    .post .meta .tags i {
+      margin-right: 8px;
+      color: #666; }
+    .post .meta .tags a {
+      display: inline-block;
+      text-align: center;
+      font-size: 0.7em;
+      text-transform: none;
+      font-weight: 400;
+      color: #666666;
+      padding: 4px;
+      border: solid 1px #ccc;
+      border-radius: 3px;
+      margin-right: 4px; }
+      .post .meta .tags a:hover {
+        border-color: #1387e9;
+        background-color: #2d95ee;
+        color: #fff; }
+
+.game {
+  text-align: center;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333333;
+  display: inline-block;
+  padding: 4px 8px;
+  box-shadow: 0 0 0 2px #dfdfdf;
+  border-radius: 6px;
+  cursor: default; }
+  .game:not(:last-child) {
+    margin-bottom: 6px; }
+  .game:before {
+    content: 'jeu';
+    color: #bbb;
+    margin-right: 4px; }
+  .game:hover {
+    box-shadow: none;
+    background-color: #333;
+    color: #fff; }

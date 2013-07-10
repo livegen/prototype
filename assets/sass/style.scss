@@ -61,7 +61,6 @@ $font-reading: 'PT Sans', 'Georgia', sans-serif;
     background: -o-linear-gradient(top,  rgba(0,0,0,0.7) 0%,rgba(58,60,63,0.7) 100%);
     background: -ms-linear-gradient(top,  rgba(0,0,0,0.7) 0%,rgba(58,60,63,0.7) 100%);
     background: linear-gradient(to bottom,  rgba(0,0,0,0.7) 0%,rgba(58,60,63,0.7) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#b33a3c3f',GradientType=0 );
 }
 
     // text
@@ -86,7 +85,6 @@ $font-reading: 'PT Sans', 'Georgia', sans-serif;
     background: -o-linear-gradient(top, #fcfcfc 0%, $grey-blue-light 100%);
     background: -ms-linear-gradient(top, #fcfcfc 0%, $grey-blue-light 100%);
     background: linear-gradient(to bottom, #fcfcfc 0%, $grey-blue-light 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#{$grey-blue-light}', GradientType=0);
     text-shadow: 0 1px #fff;
     }
     &:active {background: #f2f2f2;};
@@ -115,7 +113,6 @@ a {
     color: $link;
     text-decoration: none;
 }
-
 a:hover {
     color: $link-hover;
 }
@@ -214,7 +211,6 @@ a:hover {
         width: 174px;
         cursor: default;
         z-index: 999;
-        box-shadow: $shadow-medium; 
     }
     li:not(.header) {
         margin: 0;
@@ -760,7 +756,7 @@ a:hover {
         font-size: .8em;
     }
     .author {
-        cursor: default;
+        cursor: pointer;
         margin-top: -1px;
         padding: 24px;        
         border-right: 0;
@@ -774,7 +770,7 @@ a:hover {
             color: #666;
         }
         .twitter {
-            font-size: .9em;
+            font-size: .8em;
         }
         
         &:before {
@@ -783,6 +779,9 @@ a:hover {
         }
         div {
             margin: 6px 0;
+        }
+        &:hover {
+            color: $blue;
         }
     }
     
@@ -807,7 +806,7 @@ a:hover {
         border: $border-main;
     }
     
-    .meta {
+    .header {
         height: 86px;
         border-bottom: solid 1px #dfdfdf;
         display: table;
@@ -828,10 +827,10 @@ a:hover {
         
         .btn-share {
             display: inline-block;
-            @include rounded(2px);
+            @include rounded(3px);
             margin-right: 6px;
             a {
-                @include text(center, .7em, #fff, uppercase, 700);
+                @include text(center, .6em, #fff, uppercase, 700);
                 padding: 6px 8px;
                 display: block;
             }
@@ -881,49 +880,57 @@ a:hover {
             line-height: 36px;
             i {
                 margin-right: 8px;
-            }           
-        }   
-        .nerf {   
-            border: {
-                top: $border-main;
-                left: $border-main;
+            }   
+            border: $border-main;
+            &:active {
+                color: #fff;
             }
-            @include rounded-corner(top, left, 8px);
-            margin-top: 11px;
+        transition: 120ms;
         }   
-        .buff {   
-            border: {
-                bottom: $border-main;
-                left: $border-main;
-            }
-            @include rounded-corner(bottom, left, 8px);
+        .buff {
+            @include rounded-horz(bottom, 8px);
             margin-bottom: 12px;
-        } 
-       
-        .buff-active, .buff:hover {
-            color: #fff;
+            margin-top: -1px;
+            &:hover:not(:active) {
+                &:not(.buff-active) {
+                color: $buff;    
+                }   
+            box-shadow: inset 0 -1px 1px rgba(0, 0, 0, .08);    
+            }    
+        }
+        .nerf {   
+            @include rounded-horz(top, 8px);
+            margin-top: 12px;
+            margin-bottom: -1px;
+            &:hover:not(:active) {
+                &:not(.nerf-active) {
+                color: $nerf;    
+                }                
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .08);
+            }
+        }           
+        .buff-active, .buff:active {
             background-color: $buff;
             border-color: darken($buff, 6%);
-            text-shadow: 0 1px 1px rgba(0, 0, 0, .16);
+            border-top-color: $buff;
+            box-shadow: inset 0 -1px 1px rgba(0, 0, 0, .12);
         }
-        .buff:active {
-            background-color: darken($buff, 8%);
-        }
-        .nerf-active, .nerf:hover {
-            color: #fff;
+        .nerf-active, .nerf:active {
             background-color: $nerf;
             border-color: darken($nerf, 6%);
-            text-shadow: 0 1px rgba(0, 0, 0, .1);
+            border-bottom-color: $nerf, 4%;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .12);
         }
-        .nerf:active {
-            background-color: darken($nerf, 8%);
+        .buff-active, .nerf-active {
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .12);
         }
+        
     }
     
     .pop {
         text-align: center;
         vertical-align: middle;
-        border-left: $border-main;
     }
     
     
@@ -936,27 +943,7 @@ a:hover {
         }
     }
     
-    .game {
-        @include text(center, .7em, #333, uppercase, 700);
-        display: inline-block;
-        padding: 3px 6px;
-        &:not(:last-child) {
-            margin-bottom: 6px;
-        }        
-        border: solid 2px #dfdfdf;
-        @include rounded(6px);
-        &:before {
-            content: 'jeu';
-            color: #bbb;
-            margin-right: 4px;
-        }
-        cursor: default;
-        &:hover {
-            background-color: #333;
-            border-color: #333;
-            color: #fff;
-        }
-    }
+
 
     
     .content {
@@ -979,10 +966,66 @@ a:hover {
             background-color: #111;
             box-shadow: inset 0 1px 4px rgba(0, 0, 0, .8);
             @include rounded(6px);
+        }        
+    }
+    
+    .meta {    
+        div {
+            font-family: $font-reading;
+        }
+        .sources {      
+            padding: 6px 36px;
+            @include text(left, .8em, #999);            
+            &:before {
+                content: 'source : ';
+                text-transform: uppercase;
+                font-size: .9em;
+            }
+        }
+        .tags {
+            border-top: $border-main;
+            i {
+                margin-right: 8px;
+                color: #666;
+            }
+            padding: 12px 36px;
+            a {
+                display: inline-block;
+                @include text(center, .7em, #666);
+                padding: 4px;
+                border: solid 1px #ccc;
+                @include rounded(3px);
+                margin-right: 4px;
+                &:hover {
+                    border-color: darken($blue, 6%);
+                    background-color: $blue;
+                    color: #fff;
+                }
+            }
         }
     }
 }
 
-
+.game {
+    @include text(center, .7em, #333, uppercase, 700);
+    display: inline-block;
+    padding: 4px 8px;
+    &:not(:last-child) {
+        margin-bottom: 6px;
+    }        
+    box-shadow: 0 0 0 2px #dfdfdf;
+    @include rounded(6px);
+    &:before {
+        content: 'jeu';
+        color: #bbb;
+        margin-right: 4px;
+    }
+    cursor: default;
+    &:hover {
+        box-shadow: none;
+        background-color: #333;
+        color: #fff;
+    }
+}
 
 
