@@ -915,3 +915,15 @@ a:hover {
     box-shadow: none;
     background-color: #333;
     color: #fff; }
+
+blockquote {
+  text-align: justify;
+  font-style: italic;
+  margin: 8px 16px;
+  color: #222; }
+  blockquote:before {
+    content: "\f10d";
+    font-family: 'FontAwesome';
+    color: #0065a2;
+    font-size: 1.2em;
+    margin-right: 8px; }
