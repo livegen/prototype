@@ -23,10 +23,10 @@ a:hover {
   color: #448ccb; }
 
 .navbar {
-  background: #0065a2;
+  background: #1c70ed;
   display: block;
   height: 46px;
-  box-shadow: 0 4px #003f65, inset 0 1px 2px #00588e, inset 0 -1px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px #0f55bd, inset 0 1px 2px #1266e3, inset 0 -1px 2px rgba(0, 0, 0, 0.08);
   min-width: 100%; }
 
 .container {
@@ -59,7 +59,7 @@ a:hover {
   position: relative;
   float: left; }
   .nav-items > li:hover:not(.search):not(.nav-menu) {
-    background-color: #004c79; }
+    background-color: #105dd0; }
   .nav-items .search {
     padding: 0 10px;
     border-left: 0; }
@@ -75,7 +75,7 @@ a:hover {
   display: block;
   border-width: 0 1px 0 1px;
   border-style: solid;
-  border-color: #004c79; }
+  border-color: #105dd0; }
   .nav-items > li i, .user-details > li i {
     font-size: 1.2em; }
   .nav-items > li a, .user-details > li a {
@@ -88,39 +88,38 @@ a:hover {
   padding: 0 14px;
   cursor: pointer;
   position: relative; }
+  .nav-menu i {
+    margin-right: 14px; }
   .nav-menu:hover {
-    background-color: #003f65; }
+    background-color: #111; }
     .nav-menu:hover ul {
       display: block; }
   .nav-menu ul {
-    padding-top: 4px;
+    padding: 8px;
     display: none;
     background-color: #222;
-    box-shadow: inset 0 4px #003f65;
+    background-color: rgba(0, 0, 0, 0.84);
+    box-shadow: inset 0 4px #111;
     position: absolute;
     left: 0;
-    width: 174px;
+    width: 872px;
     cursor: default;
-    z-index: 999; }
-  .nav-menu li:not(.header) {
+    z-index: 999;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px; }
+    .nav-menu ul:after {
+      clear: both; }
+  .nav-menu li {
     margin: 0;
     line-height: 20px;
-    border-top: solid 1px #111; }
-    .nav-menu li:not(.header) a {
+    float: left;
+    border-radius: 2px; }
+    .nav-menu li a {
       padding: 8px 14px; }
-  .nav-menu li:hover:not(.header) {
-    background-color: #0065a2;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
+  .nav-menu li:hover {
+    background-color: #1c70ed;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.16), 0 1px #111111;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
-  .nav-menu .header {
-    margin: 12px 14px 6px 14px;
-    padding: 0;
-    line-height: 20px;
-    text-align: inherit;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: #999999; }
 
 .user-details {
   float: right; }
@@ -133,15 +132,15 @@ a:hover {
       text-shadow: 0 1px rgba(0, 0, 0, 0.15);
       box-shadow: 0 4px #009b60; }
     .user-details li:active {
-      background: #00b06c;
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.14), 0 4px #009b60; }
+      background: #00bf76;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.14), 0 2px #00b06c, 0 4px #009b60; }
 
 .search-input {
   display: inline;
   padding: 6px 8px;
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 0 1px rgba(255, 255, 255, 0.08), inset 0 1px 3px rgba(0, 0, 0, 0.36);
-  background-color: #003250; }
+  background-color: #0d4caa; }
 
 .search input {
   width: 128px;
@@ -157,9 +156,9 @@ a:hover {
     outline: none; }
 
 .search-focused {
-  background: #004c79; }
+  background: #105dd0; }
   .search-focused .search-input {
-    background-color: #001928; }
+    background-color: #0a3b84; }
 
 .main-wrapper {
   width: 940px;
@@ -338,9 +337,9 @@ a:hover {
     font-weight: 700;
     margin-right: 6px; }
   .filter:hover, .sort:hover {
-    background-color: #0065a2;
+    background-color: #1c70ed;
     color: #ffffff;
-    border-color: #004c79; }
+    border-color: #105dd0; }
 
 .filter-active, .sort-active {
   background-color: #444444;
@@ -348,7 +347,7 @@ a:hover {
   color: #ffffff; }
 
 .filter-platform-checked {
-  box-shadow: inset 0 4px #0065a2; }
+  box-shadow: inset 0 4px #1c70ed; }
 
 .content-roll {
   width: 720px; }
@@ -369,14 +368,14 @@ a:hover {
   cursor: pointer;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.06); }
   .content-roll-load:hover {
-    background-color: #0065a2;
+    background-color: #1c70ed;
     color: #fff;
-    border-color: #00588e;
+    border-color: #1266e3;
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.1); }
 
 .content-roll-load:active, .filter:active, .sort:active {
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-  background-color: #004c79; }
+  background-color: #105dd0; }
 
 .content-item {
   background: #fff;
@@ -555,7 +554,7 @@ a:hover {
     background: rgba(0, 0, 0, 0.8); }
   .carousel-titles .active {
     font-weight: 700;
-    box-shadow: 4px 0 #0065a2; }
+    box-shadow: 4px 0 #1c70ed; }
 
 .slide-description-wrapper {
   position: absolute;
@@ -625,13 +624,17 @@ a:hover {
         color: #666; }
       .post .side .author .twitter {
         font-size: .9em; }
+      .post .side .author .badge img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; }
       .post .side .author:before {
         content: 'par';
         margin-left: 105px; }
       .post .side .author div {
         margin: 6px 0; }
       .post .side .author:hover {
-        color: #0065a2; }
+        color: #1c70ed; }
     .post .side .author:before, .post .side .topics:before {
       position: absolute;
       top: -8px;
@@ -813,8 +816,8 @@ a:hover {
       border-radius: 3px;
       margin-right: 4px; }
       .post .meta .tags a:hover {
-        border-color: #005283;
-        background-color: #0065a2;
+        border-color: #1162d9;
+        background-color: #1c70ed;
         color: #fff; }
   .post .comments {
     display: block;
@@ -830,7 +833,7 @@ a:hover {
       .post .comment-item .avatar img {
         height: 64px;
         width: 64px;
-        border-radius: 50%; }
+        border-radius: 4px; }
     .post .comment-item .comment {
       display: table-cell;
       vertical-align: top;
@@ -869,10 +872,10 @@ a:hover {
         margin-right: 4px; }
     .post .comment-item .mention:hover {
       color: #fff;
-      background-color: #0065a2;
-      border-color: #004c79; }
+      background-color: #1c70ed;
+      border-color: #105dd0; }
     .post .comment-item .mention:active {
-      background-color: #005283;
+      background-color: #1162d9;
       box-shadow: none; }
     .post .comment-item .report:hover {
       color: #fff;
@@ -925,6 +928,6 @@ blockquote {
   blockquote:before {
     content: "\f10d";
     font-family: 'FontAwesome';
-    color: #0065a2;
+    color: #1c70ed;
     font-size: 1.2em;
     margin-right: 8px; }

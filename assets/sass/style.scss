@@ -7,7 +7,7 @@ $twitter: #00aced;
 $link: #65aeee;
 $link-hover: #448ccb;
 $blue-light: #00b4ff;
-$blue: #0065a2;
+$blue: #1c70ed;
 $grey-blue-light:#f2f4f4;
 $green-blue: #00c479;
 $pc: #ff5e3c;
@@ -210,43 +210,45 @@ a:hover {
     padding: 0 14px;
     cursor: pointer;
     position: relative;
+    i {
+        margin-right: 14px;
+    }
     &:hover {
-        background-color: darken($blue, 12%);
+        background-color: #111;
         ul {
             display: block;
         }
     }
     ul {
-        padding-top: 4px;
+        padding: 8px;
         display: none;
         background-color: #222;
-        box-shadow: inset 0 4px darken($blue, 12%);
+        background-color: rgba(0, 0, 0, .84);
+        box-shadow: inset 0 4px #111;
         position: absolute;
         left: 0;
-        width: 174px;
+        width: 872px;
         cursor: default;
         z-index: 999;
+        @include rounded-horz(bottom);
+        &:after {
+            clear: both;
+        }
     }
-    li:not(.header) {
+    li{
         margin: 0;
         line-height: 20px;
-        border-top: solid 1px #111;
-        
+        float: left;
+        border-radius: 2px;
         a {
             padding: 8px 14px;
         }
     }
-    li:hover:not(.header) {
+    li:hover {
         background-color: $blue;
-        box-shadow: inset 0 1px rgba(255, 255, 255, .12);
+        box-shadow: inset 0 1px rgba(255, 255, 255, .16), 0 1px #111;
         text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
     }    
-    .header {
-        margin: 12px 14px 6px 14px;
-        padding: 0;
-        line-height: 20px;
-        @include text(inherit, .9em, #999, uppercase);
-    }
 }
 
 .user-details {
@@ -262,8 +264,8 @@ a:hover {
             box-shadow: 0 4px darken($green-blue, 8%);
         }
         &:active {
-            background: darken($green-blue, 4%);
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .14), 0 4px darken($green-blue, 8%);
+            background: darken($green-blue, 1%);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .14), 0 2px darken($green-blue, 4%), 0 4px darken($green-blue, 8%);
         }
     }
 }
@@ -271,7 +273,7 @@ a:hover {
 .search-input {
     display: inline;
     padding: 6px 8px;
-    border-radius: 6px;    
+    border-radius: 4px;    
     box-shadow: 0 1px rgba(255, 255, 255, .08), inset 0 1px 3px rgba(0, 0, 0, .36);
     background-color: darken($blue, 16%);
 }
@@ -784,7 +786,13 @@ a:hover {
             .twitter {
                 font-size: .9em;
             }
-            
+            .badge {
+                img {
+                width: 120px;
+                height: 120px;
+                @include rounded(50%);
+                }
+            }
             &:before {
                 content: 'par';
                 margin-left: 105px;
@@ -1038,7 +1046,7 @@ a:hover {
             img {
                 height: 64px;
                 width: 64px;
-                @include rounded(50%);
+                @include rounded(4px);
             }
         }        
         .comment {
